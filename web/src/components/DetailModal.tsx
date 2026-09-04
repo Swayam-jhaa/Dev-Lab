@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ArrowUpRight } from "lucide-react";
 import { CveItem, AiBreakthrough, TrendingTool } from "../types/intelligence";
@@ -17,19 +17,30 @@ interface DetailModalProps {
 }
 
 export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) => {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    window.addEventListener("keydown", handleKeyDown);
+    if (payload) {
+      window.addEventListener("keydown", handleKeyDown);
+      // Auto focus close button on open for accessibility
+      setTimeout(() => closeButtonRef.current?.focus(), 50);
+    }
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+  }, [payload, onClose]);
 
   if (!payload) return null;
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Intelligence Dossier Modal"
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      >
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -49,15 +60,17 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
         >
           {/* Header Bar */}
           <div className="flex items-center justify-between border-b border-stone-300 pb-3">
-            <div className="font-mono text-xs uppercase tracking-widest text-stone-500">
+            <div className="font-mono text-xs uppercase tracking-widest text-[#57534E]">
               {payload.type === "cve" && `VULNERABILITY DOSSIER · ${payload.item.id}`}
               {payload.type === "ai" && `AI RESEARCH DOSSIER · ${payload.item.category}`}
               {payload.type === "tool" && `TOOL ARSENAL DOSSIER · ${payload.item.repo_name}`}
             </div>
 
             <button
+              ref={closeButtonRef}
               onClick={onClose}
-              className="p-1 hover:bg-stone-300 transition-colors text-stone-600 hover:text-stone-900"
+              aria-label="Close dossier"
+              className="p-1.5 hover:bg-stone-300 transition-colors text-stone-600 hover:text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
               title="Close (Esc)"
             >
               <X className="w-4 h-4" />
@@ -68,7 +81,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
           {payload.type === "cve" && (
             <div className="space-y-4">
               <div>
-                <div className="flex flex-wrap items-center gap-2 mb-2 font-mono text-xs text-stone-600">
+                <div className="flex flex-wrap items-center gap-2 mb-2 font-mono text-xs text-[#57534E]">
                   <span className="font-bold text-red-800 uppercase">
                     {payload.item.severity}
                   </span>
@@ -77,7 +90,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
                   {payload.item.epss_score !== null && payload.item.epss_score !== undefined && (
                     <>
                       <span>·</span>
-                      <span className="font-semibold text-stone-900">
+                      <span className="font-semibold text-stone-900 tabular-nums">
                         EPSS: {(payload.item.epss_score * 100).toFixed(2)}%
                       </span>
                     </>
@@ -89,7 +102,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
               </div>
 
               <div className="space-y-1.5">
-                <span className="font-mono text-[10px] uppercase text-stone-500 block">
+                <span className="font-mono text-[10px] uppercase text-[#57534E] block font-semibold">
                   ANALYSIS:
                 </span>
                 <p className="font-sans text-sm text-stone-800 leading-relaxed bg-white/60 p-4 border border-stone-300">
@@ -98,7 +111,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
               </div>
 
               <div className="space-y-1.5">
-                <span className="font-mono text-[10px] uppercase text-stone-500 block">
+                <span className="font-mono text-[10px] uppercase text-[#57534E] block font-semibold">
                   ACTION REQUIRED:
                 </span>
                 <div className="bg-stone-900 text-stone-200 p-4 font-mono text-xs leading-relaxed">
@@ -111,10 +124,10 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
                   href={payload.item.source_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 bg-stone-900 text-stone-100 hover:bg-stone-800 px-4 py-2 font-mono text-xs uppercase font-semibold transition-colors"
+                  className="flex items-center gap-1.5 bg-stone-900 text-stone-100 hover:bg-stone-800 px-4 py-2 font-mono text-xs uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
                 >
                   <span>Official Advisory</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -123,7 +136,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
           {payload.type === "ai" && (
             <div className="space-y-4">
               <div>
-                <div className="flex items-center gap-2 mb-2 font-mono text-xs text-stone-600">
+                <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#57534E] tabular-nums">
                   <span className="font-semibold uppercase">{payload.item.category}</span>
                   <span>·</span>
                   <span>▲ {payload.item.upvotes_or_likes} UPVOTES</span>
@@ -134,7 +147,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
               </div>
 
               <div className="space-y-1.5">
-                <span className="font-mono text-[10px] uppercase text-stone-500 block">
+                <span className="font-mono text-[10px] uppercase text-[#57534E] block font-semibold">
                   ABSTRACT:
                 </span>
                 <p className="font-sans text-sm text-stone-800 leading-relaxed bg-white/60 p-4 border border-stone-300">
@@ -143,7 +156,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
               </div>
 
               <div className="space-y-1.5">
-                <span className="font-mono text-[10px] uppercase text-stone-500 block">
+                <span className="font-mono text-[10px] uppercase text-[#57534E] block font-semibold">
                   WHY IT MATTERS:
                 </span>
                 <p className="font-sans text-sm text-stone-900 bg-amber-50/60 p-4 border border-amber-200 leading-relaxed italic">
@@ -156,10 +169,10 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
                   href={payload.item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 bg-stone-900 text-stone-100 hover:bg-stone-800 px-4 py-2 font-mono text-xs uppercase font-semibold transition-colors"
+                  className="flex items-center gap-1.5 bg-stone-900 text-stone-100 hover:bg-stone-800 px-4 py-2 font-mono text-xs uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
                 >
                   <span>Read Paper</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -168,7 +181,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
           {payload.type === "tool" && (
             <div className="space-y-4">
               <div>
-                <div className="flex items-center gap-2 mb-2 font-mono text-xs text-stone-600">
+                <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#57534E] tabular-nums">
                   <span className="font-semibold uppercase">{payload.item.language || "CODE"}</span>
                   <span>·</span>
                   <span>★ {payload.item.stars.toLocaleString()} STARS</span>
@@ -179,7 +192,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
               </div>
 
               <div className="space-y-1.5">
-                <span className="font-mono text-[10px] uppercase text-stone-500 block">
+                <span className="font-mono text-[10px] uppercase text-[#57534E] block font-semibold">
                   PROJECT SUMMARY:
                 </span>
                 <p className="font-sans text-sm text-stone-800 leading-relaxed bg-white/60 p-4 border border-stone-300">
@@ -188,7 +201,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
               </div>
 
               <div className="space-y-1.5">
-                <span className="font-mono text-[10px] uppercase text-stone-500 block">
+                <span className="font-mono text-[10px] uppercase text-[#57534E] block font-semibold">
                   USE CASE:
                 </span>
                 <p className="font-mono text-xs text-stone-900 bg-stone-200/60 p-4 border border-stone-300 leading-relaxed">
@@ -201,10 +214,10 @@ export const DetailModal: React.FC<DetailModalProps> = ({ payload, onClose }) =>
                   href={payload.item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 bg-stone-900 text-stone-100 hover:bg-stone-800 px-4 py-2 font-mono text-xs uppercase font-semibold transition-colors"
+                  className="flex items-center gap-1.5 bg-stone-900 text-stone-100 hover:bg-stone-800 px-4 py-2 font-mono text-xs uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
                 >
                   <span>GitHub Repository</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>
               </div>
             </div>

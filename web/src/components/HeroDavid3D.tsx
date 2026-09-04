@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { DailyReport } from "../types/intelligence";
-import { getAudioFrequencyData, updateFrequency } from "../utils/audioSynth";
+import { getAudioFrequencyData } from "../utils/audioSynth";
 
 interface HeroDavid3DProps {
   report: DailyReport;
@@ -130,26 +130,26 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
       className="relative min-h-[88vh] w-full flex flex-col justify-between overflow-hidden pt-20 pb-8 px-4 sm:px-8 md:px-16 select-none bg-[#ECEAE4]"
     >
       {/* Subtle fine film grain */}
-      <div className="absolute inset-0 pointer-events-none bg-grain opacity-40 z-0" />
+      <div className="absolute inset-0 pointer-events-none bg-grain opacity-40 z-0" aria-hidden="true" />
 
       {/* Top Subtle Subheader (Matches Reference Artwork) */}
-      <div className="relative z-20 max-w-6xl mx-auto w-full flex items-center justify-between text-[10px] font-mono tracking-widest text-stone-500 uppercase border-b border-stone-300/60 pb-3">
+      <div className="relative z-20 max-w-5xl mx-auto w-full flex items-center justify-between text-[11px] font-mono tracking-widest text-[#57534E] uppercase border-b border-stone-300/80 pb-3">
         <div>
           <span>INTELLIGENCE DISPATCH</span>
           <span className="mx-2 text-stone-400">/</span>
-          <span className="text-stone-700">{report.date}</span>
+          <span className="text-stone-800 font-semibold tabular-nums">{report.date}</span>
         </div>
 
-        <div className="hidden sm:flex items-center gap-4">
-          <span>THREAT: {report.threat_level}</span>
+        <div className="hidden sm:flex items-center gap-4 tabular-nums">
+          <span>THREAT: <strong className="text-stone-900">{report.threat_level}</strong></span>
           <span className="text-stone-400">·</span>
-          <span>CARRIER: {currentFreq} MHZ</span>
+          <span>CARRIER: {currentFreq.toFixed(1)} MHZ</span>
         </div>
       </div>
 
       {/* Center 3D Perspective Stage */}
       <div
-        className="relative z-10 my-auto flex items-center justify-center py-2 w-full"
+        className="relative z-10 my-auto flex items-center justify-center py-4 w-full"
         style={{ perspective: "1200px" }}
       >
         <motion.div
@@ -158,19 +158,20 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
             rotateY,
             transformStyle: "preserve-3d",
           }}
-          className="relative max-w-4xl w-full aspect-[16/9.5] max-h-[640px] overflow-hidden shadow-3d-bust bg-[#DCD8CF] border border-stone-300/40"
+          className="relative max-w-4xl w-full aspect-[16/9.5] max-h-[640px] overflow-hidden shadow-3d-bust bg-[#DCD8CF] border border-stone-300/60"
         >
           {/* Base Classical Sculpture Artwork */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/david-hero.png"
-            alt="Michelangelo David with Cybernetic Frequency Halo"
+            alt="Classical marble bust of Michelangelo's David with a luminous audio waveform across the mouth"
             className="w-full h-full object-cover object-center filter contrast-[1.03]"
           />
 
           {/* Dynamic 3D Cursor Spotlight Overlay */}
           <motion.div
             className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-40 z-10"
+            aria-hidden="true"
             style={{
               background: useTransform(
                 [lightX, lightY],
@@ -182,6 +183,7 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
 
           {/* Dynamic Animated Synthwave Waveform Canvas Over Mouth */}
           <div
+            aria-hidden="true"
             className="absolute top-[49%] sm:top-[51%] left-[10%] right-[14%] h-20 sm:h-24 pointer-events-none z-20 flex items-center justify-center shadow-neon-wave"
           >
             <canvas
@@ -194,41 +196,53 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
 
           {/* Minimal Target Lock Callout Tag */}
           <div
-            className="absolute top-[41%] sm:top-[43%] right-[20%] sm:right-[25%] z-30 pointer-events-auto cursor-pointer"
+            role="button"
+            tabIndex={0}
             onClick={onToggleAudio}
-            title={isAudioPlaying ? "Mute Frequency" : "Listen to Frequency"}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onToggleAudio();
+              }
+            }}
+            aria-label={isAudioPlaying ? "Mute frequency synthesizer" : "Listen to frequency synthesizer"}
+            className="absolute top-[41%] sm:top-[43%] right-[18%] sm:right-[24%] z-30 pointer-events-auto cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-100 rounded-none group"
+            title={isAudioPlaying ? "Mute Frequency (142.8 MHz)" : "Listen to Frequency (142.8 MHz)"}
           >
-            <div className="bg-[#111113] text-stone-200 px-3 py-1 font-mono text-[10px] sm:text-xs font-semibold tracking-wider flex items-center gap-2 hover:text-white transition-colors">
+            <div className="bg-[#111113] text-stone-200 px-3 py-1.5 font-mono text-[10px] sm:text-xs font-semibold tracking-wider flex items-center gap-2 group-hover:text-white transition-colors">
               <span className={`w-1.5 h-1.5 rounded-full ${isAudioPlaying ? "bg-emerald-400 animate-ping" : "bg-stone-500"}`} />
-              <span>FREQ {currentFreq.toFixed(1)} MHZ</span>
+              <span className="tabular-nums">• FREQ {currentFreq.toFixed(1)} MHZ</span>
             </div>
-            <div className="font-mono text-[9px] text-stone-700 tracking-widest uppercase mt-0.5 pl-0.5">
+            <div className="font-mono text-[9px] text-stone-700 tracking-widest uppercase mt-1 pl-0.5 font-semibold">
               SIGNAL LOCKED
             </div>
           </div>
 
           {/* Minimal Ruler Scale (01, 02, 03) */}
-          <div className="absolute top-8 left-6 z-20 flex flex-col justify-between h-[75%] font-mono text-[9px] text-stone-400 pointer-events-none">
+          <div
+            aria-hidden="true"
+            className="absolute top-8 left-6 z-20 flex flex-col justify-between h-[75%] font-mono text-[9px] text-[#57534E] pointer-events-none tabular-nums"
+          >
             <span>03</span>
             <span>02</span>
             <span>01</span>
           </div>
 
           {/* Clean Telemetry Tag (Bottom Left) */}
-          <div className="absolute bottom-5 left-6 z-20 hidden md:block font-mono text-[10px] text-stone-700 pointer-events-none leading-tight">
-            <div>TRANSMISSION DATA</div>
-            <div className="text-stone-500 mt-1">STATUS: SYNCED · {report.cves.length + report.ai_breakthroughs.length + report.trending_tools.length + report.tech_news.length} SIGNALS</div>
+          <div className="absolute bottom-5 left-6 z-20 hidden md:block font-mono text-[10px] text-stone-700 pointer-events-none leading-tight tabular-nums">
+            <div className="font-semibold text-stone-800">TRANSMISSION DATA</div>
+            <div className="text-[#57534E] mt-1">STATUS: SYNCED · {report.cves.length + report.ai_breakthroughs.length + report.trending_tools.length + report.tech_news.length} SIGNALS</div>
           </div>
 
         </motion.div>
       </div>
 
       {/* Bottom Minimal Quotation Epigraph */}
-      <div className="relative z-20 max-w-6xl mx-auto w-full flex items-center justify-between text-[11px] text-stone-500 border-t border-stone-300/60 pt-3 font-mono">
+      <div className="relative z-20 max-w-5xl mx-auto w-full flex items-center justify-between text-[11px] text-[#57534E] border-t border-stone-300/80 pt-3 font-mono">
         <span className="italic font-serif text-xs text-stone-700">
           &ldquo;The purpose of computing is insight, not numbers.&rdquo;
         </span>
-        <span className="hidden sm:inline uppercase tracking-wider text-[10px]">
+        <span className="hidden sm:inline uppercase tracking-wider text-[10px] text-stone-600 font-semibold">
           RICHARD HAMMING
         </span>
       </div>
