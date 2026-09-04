@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { DailyReport } from "../types/intelligence";
 import { getAudioFrequencyData } from "../utils/audioSynth";
+import { formatDateFriendly } from "../lib/utils";
 
 interface HeroDavid3DProps {
   report: DailyReport;
@@ -77,11 +78,11 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
         const yOffset = wave * 5 * envelope;
         ctx.lineTo(x, centerY + yOffset);
       }
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.95)";
-      ctx.lineWidth = 2;
+      ctx.strokeStyle = isAudioPlaying ? "rgba(255, 245, 220, 0.95)" : "rgba(255, 255, 255, 0.95)";
+      ctx.lineWidth = 2.5;
       ctx.stroke();
 
-      // Vertical frequency bars
+      // Vertical frequency bars with reactive coloring
       for (let i = 0; i < numBars; i++) {
         const normI = i / numBars;
         const envelope = Math.pow(Math.sin(normI * Math.PI), 2.0);
@@ -89,7 +90,7 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
         let amplitude = 0;
         if (audioData && audioData.length > 0) {
           const binIndex = Math.floor((i / numBars) * (audioData.length / 2));
-          amplitude = (audioData[binIndex] / 255) * 36;
+          amplitude = (audioData[binIndex] / 255) * 38;
         } else {
           const s1 = Math.sin(i * 0.2 + phase * 2.5);
           const s2 = Math.cos(i * 0.12 - phase * 1.8);
@@ -101,17 +102,25 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
         const xPos = i * barWidth;
 
         const grad = ctx.createLinearGradient(xPos, centerY - barHeight, xPos, centerY + barHeight);
-        grad.addColorStop(0, "rgba(255, 255, 255, 0)");
-        grad.addColorStop(0.35, "rgba(245, 250, 255, 0.75)");
-        grad.addColorStop(0.5, "rgba(255, 255, 255, 1.0)");
-        grad.addColorStop(0.65, "rgba(245, 250, 255, 0.75)");
-        grad.addColorStop(1, "rgba(255, 255, 255, 0)");
+        if (isAudioPlaying) {
+          grad.addColorStop(0, "rgba(255, 230, 180, 0)");
+          grad.addColorStop(0.35, "rgba(255, 240, 200, 0.85)");
+          grad.addColorStop(0.5, "rgba(255, 255, 255, 1.0)");
+          grad.addColorStop(0.65, "rgba(200, 240, 255, 0.85)");
+          grad.addColorStop(1, "rgba(200, 240, 255, 0)");
+        } else {
+          grad.addColorStop(0, "rgba(255, 255, 255, 0)");
+          grad.addColorStop(0.35, "rgba(245, 250, 255, 0.75)");
+          grad.addColorStop(0.5, "rgba(255, 255, 255, 1.0)");
+          grad.addColorStop(0.65, "rgba(245, 250, 255, 0.75)");
+          grad.addColorStop(1, "rgba(255, 255, 255, 0)");
+        }
 
         ctx.fillStyle = grad;
         ctx.fillRect(xPos + 1, centerY - barHeight / 2, Math.max(1.5, barWidth - 1.5), barHeight);
       }
 
-      phase += 0.035;
+      phase += isAudioPlaying ? 0.05 : 0.035;
       animationFrameId = requestAnimationFrame(render);
     };
 
@@ -121,6 +130,8 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
       cancelAnimationFrame(animationFrameId);
     };
   }, [isAudioPlaying, currentFreq]);
+
+  const friendlyDate = formatDateFriendly(report.date);
 
   return (
     <section
@@ -132,18 +143,18 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
       {/* Subtle fine film grain */}
       <div className="absolute inset-0 pointer-events-none bg-grain opacity-40 z-0" aria-hidden="true" />
 
-      {/* Top Subtle Subheader (Matches Reference Artwork) */}
+      {/* Top Editorial Subheader */}
       <div className="relative z-20 max-w-5xl mx-auto w-full flex items-center justify-between text-[11px] font-mono tracking-widest text-[#57534E] uppercase border-b border-stone-300/80 pb-3">
         <div>
-          <span>INTELLIGENCE DISPATCH</span>
-          <span className="mx-2 text-stone-400">/</span>
-          <span className="text-stone-800 font-semibold tabular-nums">{report.date}</span>
+          <span className="font-bold text-stone-900">TECHPULSE DAILY</span>
+          <span className="mx-2 text-stone-400">·</span>
+          <span className="text-stone-700">{friendlyDate}</span>
         </div>
 
         <div className="hidden sm:flex items-center gap-4 tabular-nums">
-          <span>THREAT: <strong className="text-stone-900">{report.threat_level}</strong></span>
+          <span>SECURITY CLIMATE: <strong className="text-stone-900 font-semibold">{report.threat_level}</strong></span>
           <span className="text-stone-400">·</span>
-          <span>CARRIER: {currentFreq.toFixed(1)} MHZ</span>
+          <span>AUDIO FREQUENCY: {currentFreq.toFixed(1)} MHZ</span>
         </div>
       </div>
 
@@ -158,13 +169,13 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
             rotateY,
             transformStyle: "preserve-3d",
           }}
-          className="relative max-w-4xl w-full aspect-[16/9.5] max-h-[640px] overflow-hidden shadow-3d-bust bg-[#DCD8CF] border border-stone-300/60"
+          className="relative max-w-4xl w-full aspect-[16/9.5] max-h-[640px] overflow-hidden shadow-3d-bust bg-[#DCD8CF] border border-stone-300/60 transition-shadow duration-500 hover:shadow-2xl"
         >
           {/* Base Classical Sculpture Artwork */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/david-hero.png"
-            alt="Classical marble bust of Michelangelo's David with a luminous audio waveform across the mouth"
+            alt="Michelangelo's classical David bust with dynamic audio synthesizer across the mouth"
             className="w-full h-full object-cover object-center filter contrast-[1.03]"
           />
 
@@ -181,6 +192,17 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
             }}
           />
 
+          {/* Pulsing Audio Glow Ring when Audio is Active */}
+          {isAudioPlaying && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0.2, 0.45, 0.2], scale: [0.98, 1.03, 0.98] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              className="absolute top-[48%] left-[25%] right-[25%] h-24 bg-amber-400/20 rounded-full blur-2xl pointer-events-none z-15"
+              aria-hidden="true"
+            />
+          )}
+
           {/* Dynamic Animated Synthwave Waveform Canvas Over Mouth */}
           <div
             aria-hidden="true"
@@ -194,7 +216,7 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
             />
           </div>
 
-          {/* Minimal Target Lock Callout Tag */}
+          {/* Interactive Callout Button (Clear, Friendly Action) */}
           <div
             role="button"
             tabIndex={0}
@@ -205,20 +227,24 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
                 onToggleAudio();
               }
             }}
-            aria-label={isAudioPlaying ? "Mute frequency synthesizer" : "Listen to frequency synthesizer"}
-            className="absolute top-[41%] sm:top-[43%] right-[18%] sm:right-[24%] z-30 pointer-events-auto cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-100 rounded-none group"
-            title={isAudioPlaying ? "Mute Frequency (142.8 MHz)" : "Listen to Frequency (142.8 MHz)"}
+            aria-label={isAudioPlaying ? "Mute ambient audio soundscape" : "Listen to ambient audio soundscape"}
+            className="absolute top-[41%] sm:top-[43%] right-[18%] sm:right-[24%] z-30 pointer-events-auto cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-100 rounded-none group active:scale-95 transition-transform"
+            title={isAudioPlaying ? "Click to mute ambient frequency sound" : "Click to listen to ambient frequency sound"}
           >
-            <div className="bg-[#111113] text-stone-200 px-3 py-1.5 font-mono text-[10px] sm:text-xs font-semibold tracking-wider flex items-center gap-2 group-hover:text-white transition-colors">
-              <span className={`w-1.5 h-1.5 rounded-full ${isAudioPlaying ? "bg-emerald-400 animate-ping" : "bg-stone-500"}`} />
-              <span className="tabular-nums">• FREQ {currentFreq.toFixed(1)} MHZ</span>
+            <div className={`px-3 py-1.5 font-mono text-[10px] sm:text-xs font-semibold tracking-wider flex items-center gap-2 transition-all shadow-md ${
+              isAudioPlaying
+                ? "bg-amber-950/90 text-amber-200 border border-amber-500/50"
+                : "bg-[#111113] text-stone-200 hover:text-white border border-stone-700"
+            }`}>
+              <span className={`w-2 h-2 rounded-full ${isAudioPlaying ? "bg-amber-400 animate-ping" : "bg-emerald-400"}`} />
+              <span className="tabular-nums">142.8 MHz Soundscape</span>
             </div>
             <div className="font-mono text-[9px] text-stone-700 tracking-widest uppercase mt-1 pl-0.5 font-semibold">
-              SIGNAL LOCKED
+              {isAudioPlaying ? "Playing · Click to Mute" : "Sound Off · Click to Listen"}
             </div>
           </div>
 
-          {/* Minimal Ruler Scale (01, 02, 03) */}
+          {/* Left Subtle Ticks (01, 02, 03) */}
           <div
             aria-hidden="true"
             className="absolute top-8 left-6 z-20 flex flex-col justify-between h-[75%] font-mono text-[9px] text-[#57534E] pointer-events-none tabular-nums"
@@ -228,16 +254,16 @@ export const HeroDavid3D: React.FC<HeroDavid3DProps> = ({
             <span>01</span>
           </div>
 
-          {/* Clean Telemetry Tag (Bottom Left) */}
+          {/* Clean Human-Friendly Signal Summary (Bottom Left) */}
           <div className="absolute bottom-5 left-6 z-20 hidden md:block font-mono text-[10px] text-stone-700 pointer-events-none leading-tight tabular-nums">
-            <div className="font-semibold text-stone-800">TRANSMISSION DATA</div>
-            <div className="text-[#57534E] mt-1">STATUS: SYNCED · {report.cves.length + report.ai_breakthroughs.length + report.trending_tools.length + report.tech_news.length} SIGNALS</div>
+            <div className="font-semibold text-stone-800">TODAY&apos;S INTELLIGENCE FEED</div>
+            <div className="text-[#57534E] mt-1">15 Verified News Stories, Tools & Vulnerabilities</div>
           </div>
 
         </motion.div>
       </div>
 
-      {/* Bottom Minimal Quotation Epigraph */}
+      {/* Bottom Quotation */}
       <div className="relative z-20 max-w-5xl mx-auto w-full flex items-center justify-between text-[11px] text-[#57534E] border-t border-stone-300/80 pt-3 font-mono">
         <span className="italic font-serif text-xs text-stone-700">
           &ldquo;The purpose of computing is insight, not numbers.&rdquo;

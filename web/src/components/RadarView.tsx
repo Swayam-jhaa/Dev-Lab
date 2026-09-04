@@ -2,8 +2,10 @@
 
 import React, { useState, useMemo } from "react";
 import { DailyReport } from "../types/intelligence";
-import { Search, ArrowUpRight, X } from "lucide-react";
+import { Search, ArrowUpRight, X, Sparkles, Code2, ShieldAlert } from "lucide-react";
+import { motion } from "motion/react";
 import { ModalPayload } from "./DetailModal";
+import { formatDateFriendly } from "../lib/utils";
 
 interface RadarViewProps {
   report: DailyReport;
@@ -13,6 +15,8 @@ interface RadarViewProps {
 export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<"all" | "ai" | "tools" | "cve">("all");
+
+  const friendlyDate = formatDateFriendly(report.date);
 
   const filteredCves = useMemo(() => {
     if (activeFilter !== "all" && activeFilter !== "cve") return [];
@@ -47,79 +51,102 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
 
   const totalResults = filteredAi.length + filteredTools.length + filteredCves.length;
 
+  const filterTabs = [
+    { id: "all", label: "All Items", count: report.ai_breakthroughs.length + report.trending_tools.length + report.cves.length },
+    { id: "ai", label: "AI Research", count: report.ai_breakthroughs.length },
+    { id: "tools", label: "Developer Tools", count: report.trending_tools.length },
+    { id: "cve", label: "Security Alerts", count: report.cves.length },
+  ] as const;
+
   return (
     <div className="pt-24 pb-20 px-4 sm:px-8 max-w-5xl mx-auto space-y-12">
       
       {/* Editorial Header */}
       <div className="border-b border-stone-300 pb-6 space-y-2">
         <div className="font-mono text-xs uppercase tracking-widest text-[#57534E] tabular-nums">
-          RADAR SPECTRUM · CYCLE {report.date}
+          EXPLORE & DISCOVER · {friendlyDate.toUpperCase()}
         </div>
         <h1 className="font-serif text-3xl sm:text-5xl font-semibold text-stone-900 tracking-tight">
-          Tactical Signal Radar
+          Frontier AI, Open Source & Security
         </h1>
         <p className="font-sans text-stone-600 text-sm sm:text-base leading-relaxed max-w-prose">
-          Daily indexed intelligence across frontier AI papers, rising open-source tools, and high-probability exploit vulnerabilities.
+          A comprehensive daily catalog of breakthrough research papers, trending open-source tools, and critical security advisories.
         </p>
       </div>
 
-      {/* Clean Minimal Search & Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-b border-stone-300 pb-4">
+      {/* Clean Minimal Search & Filter Bar with Shadcn/Uiverse styling */}
+      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 border-b border-stone-300 pb-4">
         
-        {/* Search */}
+        {/* Search Input */}
         <div className="relative flex-1">
-          <Search className="w-3.5 h-3.5 absolute left-0 top-1/2 -translate-y-1/2 text-stone-400" aria-hidden="true" />
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" aria-hidden="true" />
           <input
             type="text"
-            aria-label="Search intelligence by CVE, paper, or tool"
-            placeholder="Search signals, CVEs, papers, or tools..."
+            aria-label="Search intelligence by keyword, title, tool, or CVE"
+            placeholder="Search papers, open source tools, or security advisories..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-6 pr-8 py-1.5 bg-transparent font-sans text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none border-b border-transparent focus:border-stone-900 transition-colors"
+            className="w-full pl-9 pr-8 py-2 bg-stone-100/80 rounded-xl font-sans text-sm text-stone-900 placeholder:text-stone-400 border border-stone-300 focus:outline-none focus:border-stone-900 focus:ring-1 focus:ring-stone-900 transition-all shadow-xs"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
               aria-label="Clear search input"
-              className="absolute right-0 top-1/2 -translate-y-1/2 p-1 text-stone-400 hover:text-stone-700"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full text-stone-400 hover:text-stone-700 hover:bg-stone-200"
             >
               <X className="w-3.5 h-3.5" />
             </button>
           )}
         </div>
 
-        {/* Filter Pills */}
-        <div className="flex items-center gap-2 font-mono text-xs">
-          {(["all", "ai", "tools", "cve"] as const).map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-3 py-1 uppercase transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 ${
-                activeFilter === filter
-                  ? "bg-stone-900 text-stone-100 font-bold"
-                  : "text-stone-600 hover:text-stone-900"
-              }`}
-            >
-              {filter === "all" ? "ALL" : filter.toUpperCase()}
-            </button>
-          ))}
+        {/* Animated Segmented Filter Tabs */}
+        <div className="flex items-center gap-1.5 p-1 bg-stone-200/70 border border-stone-300/80 rounded-xl overflow-x-auto">
+          {filterTabs.map((tab) => {
+            const active = activeFilter === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveFilter(tab.id)}
+                className={`relative px-3 py-1.5 rounded-lg font-sans text-xs font-medium transition-all whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 ${
+                  active ? "text-stone-900 font-bold" : "text-stone-600 hover:text-stone-900"
+                }`}
+              >
+                {active && (
+                  <motion.span
+                    layoutId="activeFilterPill"
+                    className="absolute inset-0 rounded-lg bg-white shadow-xs"
+                    transition={{ type: "spring", stiffness: 450, damping: 35 }}
+                  />
+                )}
+                <span className="relative z-10 flex items-center gap-1.5">
+                  <span>{tab.label}</span>
+                  <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded-full tabular-nums ${active ? "bg-stone-900 text-stone-100" : "bg-stone-300/80 text-stone-700"}`}>
+                    {tab.count}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
         </div>
 
       </div>
 
-      {/* SECTION 1: AI FRONTIER & PAPERS */}
+      {/* SECTION 1: AI RESEARCH & PAPERS */}
       {filteredAi.length > 0 && (
         <section className="space-y-6">
           <div className="flex items-baseline justify-between border-b border-stone-300 pb-2">
-            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900">
-              AI Research & Open Weights
-            </h2>
-            <span className="font-mono text-[10px] text-[#57534E] uppercase tabular-nums">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-stone-700" aria-hidden="true" />
+              <h2 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900">
+                AI Research & Open Weights
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-[#57534E] tabular-nums">
               {filteredAi.length} PAPERS
             </span>
           </div>
 
-          <div className="divide-y divide-stone-200">
+          <div className="grid grid-cols-1 gap-4">
             {filteredAi.map((ai, idx) => (
               <article
                 key={idx}
@@ -132,27 +159,34 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
                     onOpenModal({ type: "ai", item: ai });
                   }
                 }}
-                className="py-5 space-y-2 cursor-pointer group hover:bg-stone-200/40 px-3 -mx-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
+                className="p-5 rounded-xl border border-stone-300/80 bg-white/70 hover:bg-white space-y-3 cursor-pointer group card-hover-glow transition-all duration-200 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
               >
-                <div className="flex items-center justify-between font-mono text-[10px] text-[#57534E] tabular-nums">
-                  <span className="font-semibold text-stone-800 uppercase">{ai.category}</span>
-                  <span>▲ {ai.upvotes_or_likes} UPVOTES</span>
+                <div className="flex items-center justify-between font-mono text-[11px] text-[#57534E] tabular-nums">
+                  <span className="font-bold text-stone-800 bg-stone-200/70 px-2 py-0.5 rounded text-[10px] uppercase">
+                    {ai.category}
+                  </span>
+                  <span className="font-semibold text-stone-700">▲ {ai.upvotes_or_likes.toLocaleString()} Community Upvotes</span>
                 </div>
 
-                <h3 className="font-serif text-xl font-semibold text-stone-900 group-hover:text-stone-700 leading-snug flex items-start justify-between gap-2">
+                <h3 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900 group-hover:text-stone-700 leading-snug flex items-start justify-between gap-2">
                   <span>{ai.title}</span>
-                  <ArrowUpRight className="w-4 h-4 shrink-0 text-stone-400 group-hover:text-stone-900 transition-colors" aria-hidden="true" />
+                  <ArrowUpRight className="w-4 h-4 shrink-0 text-stone-400 group-hover:text-stone-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all mt-1" aria-hidden="true" />
                 </h3>
 
                 <p className="font-sans text-xs sm:text-sm text-stone-700 leading-relaxed max-w-prose">
                   {ai.summary}
                 </p>
 
-                <div className="font-sans text-xs text-stone-900 italic pt-1">
-                  <strong className="font-mono not-italic uppercase text-[10px] text-[#57534E] mr-2">
-                    IMPACT:
+                <div className="bg-amber-50/80 border border-amber-200/80 rounded-lg p-3 text-xs text-stone-800">
+                  <strong className="font-mono text-[10px] uppercase text-amber-900 block mb-0.5 font-bold">
+                    KEY TAKEAWAY & IMPACT:
                   </strong>
-                  {ai.why_it_matters}
+                  <span className="italic">{ai.why_it_matters}</span>
+                </div>
+
+                <div className="pt-1 flex items-center justify-between text-[11px] font-mono text-stone-500">
+                  <span>Click card to inspect full research details</span>
+                  <span className="font-semibold text-stone-800 group-hover:underline">View Summary →</span>
                 </div>
               </article>
             ))}
@@ -160,19 +194,22 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
         </section>
       )}
 
-      {/* SECTION 2: DEVELOPER ARSENAL */}
+      {/* SECTION 2: DEVELOPER TOOLS */}
       {filteredTools.length > 0 && (
         <section className="space-y-6 pt-4">
           <div className="flex items-baseline justify-between border-b border-stone-300 pb-2">
-            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900">
-              Developer Arsenal & Tooling
-            </h2>
-            <span className="font-mono text-[10px] text-[#57534E] uppercase tabular-nums">
+            <div className="flex items-center gap-2">
+              <Code2 className="w-4 h-4 text-stone-700" aria-hidden="true" />
+              <h2 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900">
+                Trending Developer Tools & Libraries
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-[#57534E] tabular-nums">
               {filteredTools.length} REPOSITORIES
             </span>
           </div>
 
-          <div className="divide-y divide-stone-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {filteredTools.map((tool, idx) => (
               <article
                 key={idx}
@@ -185,25 +222,38 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
                     onOpenModal({ type: "tool", item: tool });
                   }
                 }}
-                className="py-5 space-y-2 cursor-pointer group hover:bg-stone-200/40 px-3 -mx-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
+                className="p-5 rounded-xl border border-stone-300/80 bg-white/70 hover:bg-white space-y-3 cursor-pointer group card-hover-glow transition-all duration-200 shadow-xs flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
               >
-                <div className="flex items-center justify-between font-mono text-[10px] text-[#57534E] tabular-nums">
-                  <span className="font-semibold text-stone-800 uppercase">{tool.language || "CODE"}</span>
-                  <span className="font-bold text-stone-900">★ {tool.stars.toLocaleString()}</span>
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between font-mono text-[11px] text-[#57534E] tabular-nums">
+                    <span className="font-bold text-stone-800 bg-stone-200/70 px-2 py-0.5 rounded text-[10px] uppercase">
+                      {tool.language || "SOFTWARE"}
+                    </span>
+                    <span className="font-bold text-stone-900">★ {tool.stars.toLocaleString()}</span>
+                  </div>
+
+                  <h3 className="font-mono text-base font-bold text-stone-900 group-hover:text-stone-700 leading-snug flex items-start justify-between gap-2">
+                    <span>{tool.repo_name}</span>
+                    <ArrowUpRight className="w-4 h-4 shrink-0 text-stone-400 group-hover:text-stone-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all mt-0.5" aria-hidden="true" />
+                  </h3>
+
+                  <p className="font-sans text-xs text-stone-700 leading-relaxed line-clamp-2">
+                    {tool.description}
+                  </p>
                 </div>
 
-                <h3 className="font-mono text-base font-bold text-stone-900 group-hover:text-stone-700 leading-snug flex items-start justify-between gap-2">
-                  <span>{tool.repo_name}</span>
-                  <ArrowUpRight className="w-4 h-4 shrink-0 text-stone-400 group-hover:text-stone-900 transition-colors" aria-hidden="true" />
-                </h3>
-
-                <p className="font-sans text-xs sm:text-sm text-stone-700 leading-relaxed max-w-prose">
-                  {tool.description}
-                </p>
-
-                <div className="font-mono text-[11px] text-stone-600 pt-1">
-                  <span className="text-stone-400 uppercase mr-2">USE CASE:</span>
-                  {tool.use_case}
+                <div className="space-y-2 pt-2 border-t border-stone-200">
+                  <div className="bg-stone-100/90 rounded-lg p-2.5 text-xs text-stone-700 font-sans">
+                    <span className="font-mono text-[10px] uppercase font-bold text-stone-600 block mb-0.5">
+                      BEST USED FOR:
+                    </span>
+                    {tool.use_case}
+                  </div>
+                  
+                  <div className="flex items-center justify-between text-[11px] font-mono text-stone-500 pt-1">
+                    <span>Open Source</span>
+                    <span className="font-semibold text-stone-800 group-hover:underline">Repository Details →</span>
+                  </div>
                 </div>
               </article>
             ))}
@@ -211,21 +261,35 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
         </section>
       )}
 
-      {/* SECTION 3: DEFENSIVE CYBER RADAR */}
+      {/* SECTION 3: SECURITY ADVISORIES */}
       {filteredCves.length > 0 && (
         <section className="space-y-6 pt-4">
           <div className="flex items-baseline justify-between border-b border-stone-300 pb-2">
-            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900">
-              Vulnerability Ledger (EPSS Enriched)
-            </h2>
-            <span className="font-mono text-[10px] text-[#57534E] uppercase tabular-nums">
-              {filteredCves.length} EXPLOITS
+            <div className="flex items-center gap-2">
+              <ShieldAlert className="w-4 h-4 text-stone-700" aria-hidden="true" />
+              <div>
+                <h2 className="font-serif text-xl sm:text-2xl font-semibold text-stone-900">
+                  Security Advisories & Vulnerabilities
+                </h2>
+                <p className="text-stone-500 text-xs mt-0.5 font-sans">
+                  Enriched with FIRST.org EPSS exploit probability forecasting.
+                </p>
+              </div>
+            </div>
+            <span className="font-mono text-xs text-[#57534E] tabular-nums">
+              {filteredCves.length} ADVISORIES
             </span>
           </div>
 
-          <div className="divide-y divide-stone-200">
+          <div className="grid grid-cols-1 gap-4">
             {filteredCves.map((cve, idx) => {
-              const epssPercent = cve.epss_score ? (cve.epss_score * 100).toFixed(2) : null;
+              const epssPercent = cve.epss_score !== null && cve.epss_score !== undefined
+                ? (cve.epss_score * 100).toFixed(1)
+                : null;
+              
+              const isHighExploit = cve.epss_score && cve.epss_score >= 0.5;
+              const isModerateExploit = cve.epss_score && cve.epss_score >= 0.1 && cve.epss_score < 0.5;
+
               return (
                 <article
                   key={idx}
@@ -238,33 +302,51 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
                       onOpenModal({ type: "cve", item: cve });
                     }
                   }}
-                  className="py-5 space-y-2 cursor-pointer group hover:bg-stone-200/40 px-3 -mx-3 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
+                  className="p-5 rounded-xl border border-stone-300/80 bg-white/70 hover:bg-white space-y-3 cursor-pointer group card-hover-glow transition-all duration-200 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900"
                 >
-                  <div className="flex items-center justify-between font-mono text-[11px] text-[#57534E] tabular-nums">
+                  <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs tabular-nums">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-stone-900">{cve.id}</span>
-                      <span>·</span>
-                      <span className="text-stone-600">{cve.vendor} / {cve.product}</span>
+                      <span className="font-bold text-stone-900 bg-stone-200/80 px-2 py-0.5 rounded text-[11px]">
+                        {cve.id}
+                      </span>
+                      <span className="text-stone-600 text-[11px] font-sans">
+                        {cve.vendor} / {cve.product}
+                      </span>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
                       {epssPercent && (
-                        <span className="text-stone-900 font-semibold">
-                          EPSS: {epssPercent}%
+                        <span
+                          className={`text-[10px] font-mono px-2 py-0.5 rounded-full border font-semibold ${
+                            isHighExploit
+                              ? "bg-red-100/90 text-red-900 border-red-300"
+                              : isModerateExploit
+                              ? "bg-amber-100/90 text-amber-900 border-amber-300"
+                              : "bg-stone-200/70 text-stone-800 border-stone-300"
+                          }`}
+                        >
+                          Exploit Risk: {epssPercent}% {isHighExploit ? "· High" : isModerateExploit ? "· Moderate" : "· Low"}
                         </span>
                       )}
-                      <span className="font-bold text-red-800 text-[10px]">{cve.severity}</span>
+                      <span className="font-bold text-red-700 bg-red-50 border border-red-200 px-2 py-0.5 rounded text-[10px] uppercase">
+                        {cve.severity}
+                      </span>
                     </div>
                   </div>
 
                   <h3 className="font-serif text-lg sm:text-xl font-semibold text-stone-900 group-hover:text-stone-700 leading-snug flex items-start justify-between gap-2">
                     <span>{cve.title}</span>
-                    <ArrowUpRight className="w-4 h-4 shrink-0 text-stone-400 group-hover:text-stone-900 transition-colors" aria-hidden="true" />
+                    <ArrowUpRight className="w-4 h-4 shrink-0 text-stone-400 group-hover:text-stone-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all mt-0.5" aria-hidden="true" />
                   </h3>
 
-                  <p className="font-sans text-xs text-stone-700 leading-relaxed line-clamp-2 max-w-prose">
+                  <p className="font-sans text-xs sm:text-sm text-stone-700 leading-relaxed line-clamp-2 max-w-prose">
                     {cve.description}
                   </p>
+
+                  <div className="pt-2 border-t border-stone-200 flex items-center justify-between text-[11px] font-mono text-stone-500">
+                    <span>Affected: {cve.vendor} {cve.product}</span>
+                    <span className="font-semibold text-stone-800 group-hover:underline">Remediation Guide →</span>
+                  </div>
                 </article>
               );
             })}
@@ -274,8 +356,8 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
 
       {/* Empty State */}
       {totalResults === 0 && (
-        <div className="text-center py-16 border-t border-b border-stone-300 space-y-3">
-          <p className="font-serif text-xl text-stone-800">No signals found matching &ldquo;{searchQuery}&rdquo;</p>
+        <div className="text-center py-16 border border-stone-300/80 bg-white/40 rounded-2xl space-y-3">
+          <p className="font-serif text-xl text-stone-800">No items found matching &ldquo;{searchQuery}&rdquo;</p>
           <button
             onClick={() => {
               setSearchQuery("");
@@ -291,3 +373,4 @@ export const RadarView: React.FC<RadarViewProps> = ({ report, onOpenModal }) => 
     </div>
   );
 };
+
