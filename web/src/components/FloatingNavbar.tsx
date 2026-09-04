@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Volume2, VolumeX, Shield, Radio, Activity } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
 
 export type PageView = "dispatch" | "radar" | "chronicles";
 
@@ -28,20 +28,15 @@ export const FloatingNavbar: React.FC<FloatingNavbarProps> = ({
   ];
 
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-      <div className="pointer-events-auto flex items-center justify-between gap-2 sm:gap-4 bg-[#111113] text-stone-200 border border-stone-800/80 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur-md">
+    <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+      <div className="pointer-events-auto flex items-center gap-3 sm:gap-5 bg-[#111113] text-stone-300 border border-stone-800 rounded-full px-4 py-2 shadow-2xl backdrop-blur-md">
         
-        {/* Brand & Threat Level Pill */}
-        <div className="flex items-center gap-2 pl-1 pr-2 sm:pr-3 border-r border-stone-800">
-          <div className="relative flex items-center justify-center w-2.5 h-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-          </div>
-          <span className="font-display font-bold tracking-widest text-xs sm:text-sm text-white uppercase">
+        {/* Brand */}
+        <div className="flex items-center gap-2.5 pr-2 sm:pr-3 border-r border-stone-800">
+          <span className="font-serif font-bold tracking-widest text-sm text-stone-100 uppercase">
             TECHPULSE
           </span>
-          <span className="hidden md:inline-flex items-center gap-1 font-mono text-[10px] tracking-wider uppercase px-2 py-0.5 rounded-full bg-stone-900 border border-stone-750 text-stone-300">
-            <Shield className="w-2.5 h-2.5 text-amber-400" />
+          <span className="font-mono text-[9px] tracking-wider uppercase text-stone-500 hidden md:inline">
             {threatLevel}
           </span>
         </div>
@@ -54,45 +49,39 @@ export const FloatingNavbar: React.FC<FloatingNavbarProps> = ({
               <button
                 key={item.id}
                 onClick={() => onSelectPage(item.id)}
-                className={`relative px-2.5 sm:px-4 py-1 rounded-full font-mono text-[11px] sm:text-xs tracking-wider transition-colors uppercase font-medium flex items-center gap-1.5 ${
-                  active ? "text-stone-900 font-bold" : "text-stone-400 hover:text-stone-100"
+                className={`relative px-3 sm:px-4 py-1 rounded-full font-mono text-[11px] tracking-wider transition-colors uppercase ${
+                  active ? "text-stone-900 font-bold" : "text-stone-400 hover:text-stone-200"
                 }`}
               >
                 {active && (
                   <motion.span
                     layoutId="activeNavPill"
                     className="absolute inset-0 rounded-full bg-stone-100 shadow-sm"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
                   />
                 )}
-                <span className="relative z-10 opacity-60 text-[9px]">{item.num}</span>
+                <span className="relative z-10 opacity-50 text-[9px] mr-1">{item.num}</span>
                 <span className="relative z-10">{item.label}</span>
               </button>
             );
           })}
         </nav>
 
-        {/* Audio Frequency Toggle */}
+        {/* Audio Toggle */}
         <div className="pl-1 sm:pl-2 border-l border-stone-800">
           <button
             onClick={onToggleAudio}
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full font-mono text-[10px] sm:text-[11px] uppercase transition-all tracking-wider ${
+            className={`flex items-center gap-1.5 p-1.5 rounded-full transition-colors ${
               isAudioPlaying
-                ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                : "bg-stone-900 text-stone-400 hover:text-stone-200 border border-stone-800"
+                ? "text-amber-400 bg-stone-900"
+                : "text-stone-500 hover:text-stone-300"
             }`}
-            title={isAudioPlaying ? "Mute Frequency Synthesizer" : "Play Ambient 142.8 MHz Carrier Drone"}
+            title={isAudioPlaying ? "Mute 142.8 MHz Frequency" : "Tune in to 142.8 MHz Frequency"}
           >
             {isAudioPlaying ? (
-              <>
-                <Volume2 className="w-3.5 h-3.5 animate-pulse text-amber-400" />
-                <span className="hidden sm:inline">142.8 MHz</span>
-              </>
+              <Volume2 className="w-3.5 h-3.5" />
             ) : (
-              <>
-                <VolumeX className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">MUTE</span>
-              </>
+              <VolumeX className="w-3.5 h-3.5" />
             )}
           </button>
         </div>
