@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-cinzel: "Cinzel", "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Oswald", "Syne", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --color-stone-canvas: #ECEAE4;
+  --color-stone-card: #F5F3EF;
+  --color-stone-deep: #161518;
+  --color-stone-muted: #7E7B74;
+}
+
+/* Tactile film grain overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-grain-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Subtle scanlines for brutalist/cyber mode */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.20) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 3px, 3px 100%;
+}
+
+/* 3D Physical Deep Drop Shadows */
+.shadow-3d-bust {
+  filter: drop-shadow(0 35px 60px rgba(0, 0, 0, 0.38)) 
+          drop-shadow(0 15px 25px rgba(0, 0, 0, 0.22))
+          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.shadow-neon-wave {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.95))
+          drop-shadow(0 0 16px rgba(255, 255, 255, 0.65))
+          drop-shadow(0 0 35px rgba(180, 220, 255, 0.40));
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 138, 130, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 138, 130, 0.6);
+}
