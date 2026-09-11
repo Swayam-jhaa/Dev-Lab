@@ -80,10 +80,10 @@ export default function Home() {
       />
 
       {/* 4. Minimal Editorial Footer */}
-      <footer className="border-t border-stone-300 py-8 px-4 sm:px-6 md:px-12 font-mono text-xs text-stone-600 bg-[#E0DDD5]">
+      <footer className="border-t border-stone-400/60 py-8 px-4 sm:px-6 md:px-12 font-mono text-xs text-stone-700 bg-gradient-to-b from-[#D8D4CA] to-[#CEC9BE]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="font-serif font-bold tracking-wider uppercase text-stone-900 text-sm">
+            <span className="font-serif font-bold tracking-wider uppercase bg-gradient-to-b from-stone-950 via-stone-800 to-stone-600 bg-clip-text text-transparent text-sm">
               TECHPULSE INTELLIGENCE
             </span>
             <span className="opacity-40">|</span>
