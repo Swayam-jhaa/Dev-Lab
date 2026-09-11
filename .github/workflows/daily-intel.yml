@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r techpulse-intelligence/requirements.txt
 
       - name: Apply Random Organic Jitter
         if: github.event_name == 'schedule'
@@ -39,6 +39,7 @@ jobs:
           sleep $DELAY
 
       - name: Run TechPulse Intelligence Pipeline
+        working-directory: techpulse-intelligence
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.6-flash
