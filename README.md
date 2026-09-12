@@ -8,13 +8,16 @@ Welcome to **Dev-Lab** — a centralized monorepo and testing ground for focused
 
 ## 📂 Laboratory Projects
 
-| Project | Category | Tech Stack | Status | Description |
-| :--- | :--- | :--- | :---: | :--- |
-| [**TechPulse Intelligence**](./techpulse-intelligence) | Autonomous Cyber/AI Intel | Next.js 15, Python, Gemini 2.5 Flash, Web Audio | 🟢 Active | Classical Roman marble + synthwave intelligence radar with daily automated CVE ingestion & RSS syndication. |
+| Project | Category | Tech Stack | Status | Live Demo | Description |
+| :--- | :--- | :--- | :---: | :---: | :--- |
+| [**TechPulse Intelligence**](./techpulse-intelligence) | Autonomous Cyber/AI Intel | Next.js 15, Python, Gemini 2.5 Flash, Web Audio | 🟢 Active | [**techpulse-intel.vercel.app**](https://techpulse-intel.vercel.app) | Classical Roman marble + synthwave intelligence radar with daily automated CVE ingestion & RSS syndication. |
 
 ---
 
 ## 🚀 Featured Project: TechPulse Intelligence
+
+🌐 **Live Production Application**: [https://techpulse-intel.vercel.app](https://techpulse-intel.vercel.app)  
+📦 **Standalone Repository**: [github.com/Swayam-jhaa/TechPulse-Intelligence](https://github.com/Swayam-jhaa/TechPulse-Intelligence)
 
 Located in [`techpulse-intelligence/`](./techpulse-intelligence):
 
