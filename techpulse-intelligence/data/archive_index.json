@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-14",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0116,
+    "summary": "The overall cybersecurity threat posture remains HIGH today, maintaining yesterday's elevated security baseline across enterprise development and networking ecosystems. Key vulnerabilities demand imme...",
+    "cves_count": 5,
+    "ai_count": 8,
+    "tools_count": 5,
+    "news_count": 5,
+    "json_path": "data/2026/09/2026-09-14.json",
+    "md_path": "reports/2026/09/2026-09-14.md"
+  },
+  {
     "date": "2026-09-13",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
