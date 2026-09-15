@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-09-14 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-09-15 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 8
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
 
 ### Highlights
-- GitLab path traversal flaw (CVE-2026-85706) poses the highest exploit probability (EPSS 1.16%), allowing unauthenticated arbitrary file reads via the commits API.
-- OpenAI open-sources NavierStokesAndEuler in Lean, marking a major milestone in machine-verified mathematical proofs.
-- Fable 5.1 demonstrates advanced LLM cryptanalysis by solving the 370-year-old Cyphral Distich cipher.
+- NEW: Cisco disclosed CVE-2026-76461 in Secure Email Gateway, allowing unauthenticated remote execution with root privileges.
+- NEW: GitLab repository commits API path traversal (CVE-2026-85706) shows a high EPSS score of 11.1% (95.7th percentile), allowing arbitrary file reads.
+- NEW: Grouped Value Attention (GVA) paper introduces on-demand key reconstruction to alleviate transformer KV cache memory bottlenecks.
 
-👉 **[Read Full Daily Intelligence Report (2026-09-14)](reports/2026/09/2026-09-14.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-09-15)](reports/2026/09/2026-09-15.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---

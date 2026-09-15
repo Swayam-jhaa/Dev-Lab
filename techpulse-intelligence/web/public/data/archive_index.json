@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-15",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.1111,
+    "summary": "The enterprise cyber threat climate remains maintained at HIGH day-over-day, anchored by critical edge security disclosures and supply chain target vectors. Of primary urgency is newly disclosed CVE-2...",
+    "cves_count": 5,
+    "ai_count": 5,
+    "tools_count": 4,
+    "news_count": 4,
+    "json_path": "data/2026/09/2026-09-15.json",
+    "md_path": "reports/2026/09/2026-09-15.md"
+  },
+  {
     "date": "2026-09-14",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
