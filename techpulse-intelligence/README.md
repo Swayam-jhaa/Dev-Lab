@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-09-15 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-09-16 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 8
 
 ### Highlights
-- NEW: Cisco disclosed CVE-2026-76461 in Secure Email Gateway, allowing unauthenticated remote execution with root privileges.
-- NEW: GitLab repository commits API path traversal (CVE-2026-85706) shows a high EPSS score of 11.1% (95.7th percentile), allowing arbitrary file reads.
-- NEW: Grouped Value Attention (GVA) paper introduces on-demand key reconstruction to alleviate transformer KV cache memory bottlenecks.
+- CRITICAL CI/CD RISK: GitLab CE/EE faces a path traversal flaw (CVE-2026-85706) with a 11.96% EPSS probability score, permitting unauthenticated file disclosure.
+- NEW AI AUDIO MODELS: StepAudio 3 introduces Realtime and Music foundation models featuring duplex audio interaction and Think-While-Speak latency reduction.
+- OPEN-WEIGHTS RELEASES: Alibaba released Qwen3.8-27B alongside new lightweight options like MiniCPM5-2B and Edge0-35B-A3B-preview.
 
-👉 **[Read Full Daily Intelligence Report (2026-09-15)](reports/2026/09/2026-09-15.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-09-16)](reports/2026/09/2026-09-16.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
