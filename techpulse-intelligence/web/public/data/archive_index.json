@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-17",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0201,
+    "summary": "The cyber threat climate remains elevated at HIGH today as major perimeter, identity management, and endpoint systems face critical security advisories. Newly reported vulnerabilities in Cisco Identit...",
+    "cves_count": 5,
+    "ai_count": 5,
+    "tools_count": 5,
+    "news_count": 5,
+    "json_path": "data/2026/09/2026-09-17.json",
+    "md_path": "reports/2026/09/2026-09-17.md"
+  },
+  {
     "date": "2026-09-16",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
