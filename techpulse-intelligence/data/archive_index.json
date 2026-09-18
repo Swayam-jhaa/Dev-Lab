@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-18",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0201,
+    "summary": "The global cybersecurity posture remains at a HIGH threat climate day-over-day, anchored by critical edge infrastructure and enterprise access control vulnerabilities. Key vectors targeting edge conne...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 4,
+    "json_path": "data/2026/09/2026-09-18.json",
+    "md_path": "reports/2026/09/2026-09-18.md"
+  },
+  {
     "date": "2026-09-17",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",

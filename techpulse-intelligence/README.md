@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-09-17 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-09-18 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Nvidia introduced native GPU kernel programming in Rust, bringing memory-safe concurrency to high-performance CUDA development.
-- Newly disclosed CVE-2026-76460 in Cisco ISE allows unauthenticated remote attackers to bypass web management interfaces via privileged API misuse.
-- Cisco Secure Email Gateway SQLi (CVE-2026-76461) shows elevated exploit probability (EPSS 0.02009 / 80th percentile), granting remote root command execution.
+- Threat level holds steady at HIGH driven by remote code execution and API bypass flaws across Cisco, ConnectWise, and Google systems.
+- Cisco Secure Email Gateway (CVE-2026-76461) represents the highest exposure risk today with a 79.8th percentile EPSS rating for unauthenticated root command execution.
+- Open-weights vision-language deployment surges with massive adoption of Qwen3.8-27B and DeepSeek-V4.1-Flash models.
 
-👉 **[Read Full Daily Intelligence Report (2026-09-17)](reports/2026/09/2026-09-17.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-09-18)](reports/2026/09/2026-09-18.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
