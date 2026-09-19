@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-19",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0078,
+    "summary": "The cybersecurity landscape remains at a HIGH threat level, characterized by a cluster of critical vulnerabilities within the Linux Kernel. Three distinct flaws (CVE-2025-39964, CVE-2026-53266, and CV...",
+    "cves_count": 5,
+    "ai_count": 3,
+    "tools_count": 3,
+    "news_count": 2,
+    "json_path": "data/2026/09/2026-09-19.json",
+    "md_path": "reports/2026/09/2026-09-19.md"
+  },
+  {
     "date": "2026-09-18",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
