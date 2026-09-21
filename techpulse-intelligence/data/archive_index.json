@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-21",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.012,
+    "summary": "The cybersecurity landscape remains at a HIGH threat level, characterized by persistent vulnerabilities in foundational infrastructure. Multiple high-severity Linux kernel vulnerabilities (CVE-2025-39...",
+    "cves_count": 5,
+    "ai_count": 2,
+    "tools_count": 2,
+    "news_count": 2,
+    "json_path": "data/2026/09/2026-09-21.json",
+    "md_path": "reports/2026/09/2026-09-21.md"
+  },
+  {
     "date": "2026-09-20",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
