@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-23",
+    "threat_level": "CRITICAL",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0199,
+    "summary": "The cybersecurity landscape has shifted to a CRITICAL state today, driven by a surge in high-severity vulnerabilities affecting critical infrastructure and enterprise security appliances. Multiple ven...",
+    "cves_count": 5,
+    "ai_count": 3,
+    "tools_count": 2,
+    "news_count": 2,
+    "json_path": "data/2026/09/2026-09-23.json",
+    "md_path": "reports/2026/09/2026-09-23.md"
+  },
+  {
     "date": "2026-09-22",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",

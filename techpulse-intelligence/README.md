@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-09-22 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-09-23 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 2 | **AI Breakthroughs**: 2
+> **Threat Assessment**: CRITICAL | **Active CVEs**: 5 | **AI Breakthroughs**: 3
 
 ### Highlights
-- Immediate remediation required for Zyxel GS1900 switches due to a new stack-based buffer overflow vulnerability (CVE-2026-7273).
-- Linux kernel security remains volatile; prioritize patching for CVE-2025-39682, which shows the highest EPSS probability (0.012) among the tracked kernel flaws.
-- The developer ecosystem is rapidly adopting 'Jev' decision-making models, as evidenced by the surge in high-performance tooling like browser-use/jev-ultrafast and laya-mlx.
+- Critical RCE vulnerabilities identified in F5 BIG-IP APM and Check Point security appliances require immediate patching to prevent unauthenticated exploitation.
+- The threat level has escalated to CRITICAL due to the breadth of high-impact vulnerabilities across network infrastructure.
+- AI research is shifting toward agentic safety and formal verification, with new studies highlighting emergent collusion risks in long-horizon LLM interactions.
 
-👉 **[Read Full Daily Intelligence Report (2026-09-22)](reports/2026/09/2026-09-22.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-09-23)](reports/2026/09/2026-09-23.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
