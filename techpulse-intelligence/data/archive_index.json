@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-24",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "CRITICAL",
+    "top_epss": 0.0242,
+    "summary": "The global cybersecurity threat climate has transitioned day-over-day from CRITICAL to HIGH, with active vulnerability reports heavily targeting enterprise perimeter and network security infrastructur...",
+    "cves_count": 5,
+    "ai_count": 8,
+    "tools_count": 5,
+    "news_count": 5,
+    "json_path": "data/2026/09/2026-09-24.json",
+    "md_path": "reports/2026/09/2026-09-24.md"
+  },
+  {
     "date": "2026-09-23",
     "threat_level": "CRITICAL",
     "yesterday_threat_level": "HIGH",
