@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-09-26 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-09-27 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 3 | **AI Breakthroughs**: 2
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Critical RCE vulnerabilities in WordPress Core and Microsoft SharePoint necessitate immediate patching to prevent unauthenticated exploitation.
-- The Superposition Linearity Hypothesis paper provides a breakthrough in understanding Transformer architecture, suggesting models can process multiple streams simultaneously.
-- Developer tooling is shifting toward agentic workflows, evidenced by the rapid adoption of ZCode and unreal-agent, while 'plan mode' in AI coding assistants faces industry skepticism.
+- NEW: Adobe Commerce and Magento vulnerability CVE-2026-71362 surfaced with an EPSS exploit probability score of 87.51% (99.75th percentile), allowing unauthorized privilege escalation.
+- NEW: WSO2 API Control Plane and Traffic Manager impacted by path traversal vulnerability CVE-2026-5430, enabling arbitrary file uploads and potential RCE.
+- NEW: Open-weights community momentum surges around model releases like convaiinnovations/laya (3,900+ likes) and XingChen-AGI Xing4.0-29B-A4B.
 
-👉 **[Read Full Daily Intelligence Report (2026-09-26)](reports/2026/09/2026-09-26.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-09-27)](reports/2026/09/2026-09-27.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
