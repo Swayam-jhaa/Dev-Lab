@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-09-27 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-09-28 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 2
 
 ### Highlights
-- NEW: Adobe Commerce and Magento vulnerability CVE-2026-71362 surfaced with an EPSS exploit probability score of 87.51% (99.75th percentile), allowing unauthorized privilege escalation.
-- NEW: WSO2 API Control Plane and Traffic Manager impacted by path traversal vulnerability CVE-2026-5430, enabling arbitrary file uploads and potential RCE.
-- NEW: Open-weights community momentum surges around model releases like convaiinnovations/laya (3,900+ likes) and XingChen-AGI Xing4.0-29B-A4B.
+- Critical Citrix NetScaler vulnerabilities (CVE-2026-88771/88772) require immediate forensic triage and mitigation.
+- WordPress Core (CVE-2026-87902) remains a top-tier risk with an EPSS score of 0.18166, indicating high likelihood of exploitation.
+- New research into depth-adaptive inference for looped language models promises significant efficiency gains for LLM deployment.
 
-👉 **[Read Full Daily Intelligence Report (2026-09-27)](reports/2026/09/2026-09-27.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-09-28)](reports/2026/09/2026-09-28.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
