@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-05 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-06 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 3
 
 ### Highlights
-- Active exploitation of Zammad vulnerabilities (CVE-2026-102490/89) necessitates immediate patching to prevent root-level escalation.
-- Citrix NetScaler users must address CVE-2026-88779 to mitigate potential DoS risks.
-- AI research is shifting toward cross-lingual capability transfer and bias mitigation, signaling a maturation in model alignment.
+- Active exploitation of Zammad vulnerabilities (CVE-2026-102489, CVE-2026-102490) necessitates immediate patching to prevent root escalation.
+- Fortinet FortiMail path traversal (CVE-2026-104286) remains a critical risk with an EPSS percentile of 81.9%, indicating high likelihood of exploitation.
+- AI research is shifting toward 'latent reasoning' and 'looped MoE' architectures, aiming to optimize compute efficiency for complex decision-making tasks.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-05)](reports/2026/10/2026-10-05.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-06)](reports/2026/10/2026-10-06.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
