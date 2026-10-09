@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-08 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-09 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Active exploitation of Zammad (CVE-2026-102489/90) requires immediate patching to prevent root-level privilege escalation.
-- Fortinet and Cisco vulnerabilities remain high-risk; prioritize patching based on CISA BOD 26-04 guidelines.
-- AI research is shifting toward efficient deployment, with new frameworks like FastOPD enabling lightweight VLA models.
+- High-probability legacy exploits surfaced today across ProFTPD (CVE-2015-3306) and Apache Struts (CVE-2016-3081), both featuring EPSS scores over 93%.
+- Google released embeddinggemma-2 and Cloudflare launched clef, bolstering accessible open-weights models for feature extraction and vision processing.
+- OpenAI introduced 'openai/math' in Lean, emphasizing automated formal mathematical verification and theorem proving.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-08)](reports/2026/10/2026-10-08.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-09)](reports/2026/10/2026-10-09.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---

@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-09",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.9675,
+    "summary": "The global cyber threat climate remains at HIGH today, holding steady from yesterday's baseline posture. Security operations teams must address critical high-probability exploit vectors targeting lega...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 3,
+    "news_count": 3,
+    "json_path": "data/2026/10/2026-10-09.json",
+    "md_path": "reports/2026/10/2026-10-09.md"
+  },
+  {
     "date": "2026-10-08",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
