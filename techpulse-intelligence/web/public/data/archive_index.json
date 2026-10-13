@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-13",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.995,
+    "summary": "The global cybersecurity posture remains at HIGH, continuing a dangerous climate driven by high-probability legacy vulnerabilities and active infrastructure attacks. Critical vulnerabilities across co...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 5,
+    "news_count": 3,
+    "json_path": "data/2026/10/2026-10-13.json",
+    "md_path": "reports/2026/10/2026-10-13.md"
+  },
+  {
     "date": "2026-10-12",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
