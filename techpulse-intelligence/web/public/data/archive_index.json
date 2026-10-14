@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-14",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.9941,
+    "summary": "The cybersecurity landscape remains at a HIGH threat level, driven by critical new vulnerabilities in Ivanti Connect Secure and Microsoft Windows. Both vulnerabilities facilitate command execution or ...",
+    "cves_count": 5,
+    "ai_count": 6,
+    "tools_count": 3,
+    "news_count": 3,
+    "json_path": "data/2026/10/2026-10-14.json",
+    "md_path": "reports/2026/10/2026-10-14.md"
+  },
+  {
     "date": "2026-10-13",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
