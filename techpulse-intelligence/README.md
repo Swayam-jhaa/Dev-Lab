@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-17 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-18 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Newly surfaced vulnerabilities in BeyondTrust Remote Support (CVE-2026-102764) and Fortinet products (CVE-2025-61624) require urgent patch management under CISA BOD 26-04 instructions.
-- Atlassian multi-product directory access vulnerability (CVE-2026-21589) remains a prime threat target with an EPSS score of 12.71% (96th percentile).
-- Sparse Autoencoder (SAE) research demonstrates diminishing returns in feature reproducibility beyond 50M tokens, establishing new data efficiency benchmarks for interpretability.
+- Atlassian Data Center products face critical arbitrary file access risks (CVE-2026-21589) with a high EPSS score of 0.12711 (96.2th percentile).
+- DeepSeek released DeepSeek-V4.1-Flash-1017 (is_new_today), expanding high-efficiency open-weights vision-language capabilities.
+- The LEASH paper (is_new_today) introduces uncertainty-aware weak-to-strong oversight to reduce computer-use agent runtime costs while maintaining execution accuracy.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-17)](reports/2026/10/2026-10-17.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-18)](reports/2026/10/2026-10-18.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---

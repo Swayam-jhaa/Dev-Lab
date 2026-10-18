@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-18",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.1271,
+    "summary": "The global cybersecurity threat landscape remains at HIGH baseline levels today, maintaining continuity from yesterday's posture. High-severity exposure across enterprise infrastructure is led by an a...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 4,
+    "json_path": "data/2026/10/2026-10-18.json",
+    "md_path": "reports/2026/10/2026-10-18.md"
+  },
+  {
     "date": "2026-10-17",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
