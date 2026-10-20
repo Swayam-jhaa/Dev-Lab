@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-20",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0478,
+    "summary": "The global cybersecurity posture remains at a HIGH threat level day-over-day, driven by critical vulnerabilities across core enterprise remote management, security gateways, and backup systems. Organi...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 3,
+    "json_path": "data/2026/10/2026-10-20.json",
+    "md_path": "reports/2026/10/2026-10-20.md"
+  },
+  {
     "date": "2026-10-19",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
