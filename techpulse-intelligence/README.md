@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-20 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-21 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: HIGH | **Active CVEs**: 2 | **AI Breakthroughs**: 2
 
 ### Highlights
-- AhsayCBS command injection (CVE-2026-105134) presents an immediate threat with an EPSS exploit score in the 91.8th percentile.
-- Google released embeddinggemma-2, significantly boosting open-weights capability for feature extraction and vector embeddings.
-- DeepSeek introduced DeepInfer, a high-performance open-source inference framework designed for large-scale DeepSeek models.
+- Immediate patching required for Plex Media Server to address a 4-CVE chain enabling remote code execution and SSRF.
+- EG Secure Solutions SiteGuard Server Edition is vulnerable to OS command injection; prioritize remediation per CISA BOD 26-04.
+- Monitor official PHP security channels for the imminent release of patches for CVE-2026-109618 and CVE-2026-109619.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-20)](reports/2026/10/2026-10-20.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-21)](reports/2026/10/2026-10-21.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
