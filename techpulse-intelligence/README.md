@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-21 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-22 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 2 | **AI Breakthroughs**: 2
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Immediate patching required for Plex Media Server to address a 4-CVE chain enabling remote code execution and SSRF.
-- EG Secure Solutions SiteGuard Server Edition is vulnerable to OS command injection; prioritize remediation per CISA BOD 26-04.
-- Monitor official PHP security channels for the imminent release of patches for CVE-2026-109618 and CVE-2026-109619.
+- CRITICAL SUPPLY CHAIN ATTACK: PyPI package LiteLLM 1.107.0 was backdoored with credential-stealing malware; immediate dependency audits are required.
+- NEW PLEX EXPLOIT CHAIN: Newly surfaced vulnerabilities (CVE-2026-96652, CVE-2026-96654, CVE-2026-96655) allow attackers to chain SSRF with path traversal (CVE-2026-96656) for remote file write execution.
+- OPEN WEIGHTS EFFICIENCY: DeepSeek launched DeepInfer for optimized model serving, complementing Meta's open release of Muse-Spark-Open-816B-A42B.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-21)](reports/2026/10/2026-10-21.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-22)](reports/2026/10/2026-10-22.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
