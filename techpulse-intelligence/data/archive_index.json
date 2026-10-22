@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-22",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0137,
+    "summary": "The global cybersecurity ecosystem faces elevated risk today, primarily driven by a critical supply chain compromise in the popular PyPI package LiteLLM (version 1.107.0) containing a backdoor credent...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 4,
+    "json_path": "data/2026/10/2026-10-22.json",
+    "md_path": "reports/2026/10/2026-10-22.md"
+  },
+  {
     "date": "2026-10-21",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
