@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-23",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0117,
+    "summary": "The cybersecurity landscape remains at a HIGH threat level, primarily driven by a cluster of critical vulnerabilities in Plex Media Server. These vulnerabilities (CVE-2026-96652, 96654, 96655, 96656) ...",
+    "cves_count": 2,
+    "ai_count": 2,
+    "tools_count": 2,
+    "news_count": 2,
+    "json_path": "data/2026/10/2026-10-23.json",
+    "md_path": "reports/2026/10/2026-10-23.md"
+  },
+  {
     "date": "2026-10-22",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
