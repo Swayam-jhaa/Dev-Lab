@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-23 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-24 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 2 | **AI Breakthroughs**: 2
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
 
 ### Highlights
-- Plex Media Server users must update immediately to mitigate a chain of four high-severity vulnerabilities that enable remote code execution and SSRF.
-- EG Secure Solutions SiteGuard remains a high-risk target; organizations must prioritize forensic triage as mandated by CISA BOD 26-04.
-- The AI research community is shifting toward efficiency, with new models like DeepSeek-V4.1-Flash and MambaAct focusing on reducing inference costs for real-time applications.
+- New high-severity OS command injection in Collabora Online CODE Server (CVE-2026-110447) enables unauthenticated RCE when the server is stopped.
+- Arista VeloCloud Orchestrator affected by a critical SQL injection (CVE-2026-114625) threatening administrative host compromise.
+- LLM-Attacker research framework introduces standardized red-teaming for privacy leak risks in split and distributed LLM deployments.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-23)](reports/2026/10/2026-10-23.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-24)](reports/2026/10/2026-10-24.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
