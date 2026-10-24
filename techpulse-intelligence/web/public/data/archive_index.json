@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-24",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0123,
+    "summary": "Cybersecurity posture remains at a HIGH threat level today, matching yesterday's baseline. Primary attack surface concerns center on newly disclosed remote command execution and injection vulnerabilit...",
+    "cves_count": 5,
+    "ai_count": 5,
+    "tools_count": 5,
+    "news_count": 4,
+    "json_path": "data/2026/10/2026-10-24.json",
+    "md_path": "reports/2026/10/2026-10-24.md"
+  },
+  {
     "date": "2026-10-23",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
