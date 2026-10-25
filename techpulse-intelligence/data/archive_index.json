@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-25",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0228,
+    "summary": "The cybersecurity landscape remains at a HIGH threat level, characterized by a persistent cluster of high-severity vulnerabilities affecting enterprise infrastructure and media management platforms. O...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 1,
+    "news_count": 3,
+    "json_path": "data/2026/10/2026-10-25.json",
+    "md_path": "reports/2026/10/2026-10-25.md"
+  },
+  {
     "date": "2026-10-24",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
