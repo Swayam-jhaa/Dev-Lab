@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-26 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-27 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: CRITICAL | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- High-risk command injection in Collabora CODE server (CVE-2026-110447) carries a top-tier EPSS score of 12.3% (96th percentile).
-- Newly surfaced `gpu-unlock-ada` repository trends heavily for local GPU firmware tensor unlocking on RTX 40-series cards.
-- Advancements in video world modeling and RoboJudge-Bench introduce standardized benchmarks for embodied physical dynamics.
+- CRITICAL RISK (NEW TODAY): PHP vulnerabilities CVE-2026-109618 and CVE-2026-109619 allow unauthenticated RCE with EPSS exploit probabilities over 99.9%, requiring urgent vendor patching under CISA BOD 26-04.
+- NEW TODAY: DeepSeek released DeepSeek-V4.1-Flash-1017, a high-efficiency visual-language model rapidly accumulating over 3,200 community upvotes.
+- NEW TODAY: Robotics paper RoboHarness proves simple code-agent harnesses can surpass complex VLA models for embodied manipulation tasks.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-26)](reports/2026/10/2026-10-26.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-27)](reports/2026/10/2026-10-27.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
