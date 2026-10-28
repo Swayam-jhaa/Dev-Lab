@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-27 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-28 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: CRITICAL | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- CRITICAL RISK (NEW TODAY): PHP vulnerabilities CVE-2026-109618 and CVE-2026-109619 allow unauthenticated RCE with EPSS exploit probabilities over 99.9%, requiring urgent vendor patching under CISA BOD 26-04.
-- NEW TODAY: DeepSeek released DeepSeek-V4.1-Flash-1017, a high-efficiency visual-language model rapidly accumulating over 3,200 community upvotes.
-- NEW TODAY: Robotics paper RoboHarness proves simple code-agent harnesses can surpass complex VLA models for embodied manipulation tasks.
+- Critical threat level maintained due to near-100% EPSS probability for unauthenticated PHP remote code execution vulnerabilities (CVE-2026-109618 and CVE-2026-109619).
+- Newly surfaced flaws in Google Brotli (CVE-2026-111497) and Adobe Commerce (CVE-2026-48356) require immediate patching to prevent decoder memory corruption and arbitrary file uploads.
+- DeepSeek-V4.1-Flash-1017 open-weights release leads AI community updates, paired with papers disproving inherent semantic loss in discrete visual tokens.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-27)](reports/2026/10/2026-10-27.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-28)](reports/2026/10/2026-10-28.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
