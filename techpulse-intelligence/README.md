@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-28 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-29 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: CRITICAL | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Critical threat level maintained due to near-100% EPSS probability for unauthenticated PHP remote code execution vulnerabilities (CVE-2026-109618 and CVE-2026-109619).
-- Newly surfaced flaws in Google Brotli (CVE-2026-111497) and Adobe Commerce (CVE-2026-48356) require immediate patching to prevent decoder memory corruption and arbitrary file uploads.
-- DeepSeek-V4.1-Flash-1017 open-weights release leads AI community updates, paired with papers disproving inherent semantic loss in discrete visual tokens.
+- Critical RCE chains targeting PHP and Linux Kernel require immediate patching to prevent webshell implantation.
+- The Zero-Breach-Toolkit (is_new_today) provides a vital new resource for detecting mercenary spyware across cross-platform environments.
+- AI research is shifting toward embodied intelligence, with new models like HuGe and CausGround focusing on physical interaction and humanoid control.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-28)](reports/2026/10/2026-10-28.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-29)](reports/2026/10/2026-10-29.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
