@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-29 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-30 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: CRITICAL | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: CRITICAL | **Active CVEs**: 3 | **AI Breakthroughs**: 2
 
 ### Highlights
-- Critical RCE chains targeting PHP and Linux Kernel require immediate patching to prevent webshell implantation.
-- The Zero-Breach-Toolkit (is_new_today) provides a vital new resource for detecting mercenary spyware across cross-platform environments.
-- AI research is shifting toward embodied intelligence, with new models like HuGe and CausGround focusing on physical interaction and humanoid control.
+- Immediate patching required for GitLab (CVE-2026-97229) due to high EPSS probability and potential for RCE.
+- Linux Kernel vulnerabilities (CVE-2026-46300) are being actively chained to deploy PHP webshells; prioritize kernel updates.
+- Mistral Large 4 open-weights release significantly expands the capabilities available for local, high-performance LLM deployment.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-29)](reports/2026/10/2026-10-29.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-30)](reports/2026/10/2026-10-30.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
