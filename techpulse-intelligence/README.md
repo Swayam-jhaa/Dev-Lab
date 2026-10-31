@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-10-30 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-10-31 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: CRITICAL | **Active CVEs**: 3 | **AI Breakthroughs**: 2
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 8
 
 ### Highlights
-- Immediate patching required for GitLab (CVE-2026-97229) due to high EPSS probability and potential for RCE.
-- Linux Kernel vulnerabilities (CVE-2026-46300) are being actively chained to deploy PHP webshells; prioritize kernel updates.
-- Mistral Large 4 open-weights release significantly expands the capabilities available for local, high-performance LLM deployment.
+- Security Alert: 🔥 NEW: CVE-2026-118527 (Ivanti Connect Secure) is under active wild exploitation—remediation required.
+- AI Breakthrough: 🔥 'EPSBench: Benchmarking LLM Agents for Earnings Forecasting' highlights today's community interest with 2 engagements.
+- Developer Arsenal: 🔥 Repository unclebob/ub-mode surged to 5,501 stars in the Multi/Other ecosystem.
 
-👉 **[Read Full Daily Intelligence Report (2026-10-30)](reports/2026/10/2026-10-30.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-10-31)](reports/2026/10/2026-10-31.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
