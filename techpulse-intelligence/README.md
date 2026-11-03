@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-02 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-03 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- NEW TODAY: PostgreSQL 19 release is delayed as AI-assisted automated code analysis leads to a high volume of discovered edge-case bugs.
-- HIGH RISK: GitLab CI/CD regular expression vulnerability (CVE-2026-97229) poses a high RCE risk with an EPSS exploit probability score of 27.3% (98th percentile).
-- NEW TODAY: Venus-DefakerOne2 introduces a broad vision-forensics foundation model designed to detect both physical and digital media forgeries.
+- GitLab vulnerability CVE-2026-97229 poses a severe RCE risk with an EPSS score of 27.3% (98th percentile) due to CI/CD regex compilation integer overflows.
+- Ivanti Connect Secure appliances require immediate mitigation for CVE-2026-118527 and CVE-2026-111357, which allow chained arbitrary file write and privilege escalation attacks under CISA BOD 26-04.
+- Newly introduced LEANGUARD framework applies Lean4 formal verification to restrict agent tool usage and enforce fail-closed runtime security policies.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-02)](reports/2026/11/2026-11-02.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-03)](reports/2026/11/2026-11-03.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
