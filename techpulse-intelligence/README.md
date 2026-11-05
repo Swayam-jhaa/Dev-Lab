@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-04 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-05 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Immediate patching required for WordPress Core (CVE-2026-119977) to prevent RCE via TOCTOU race conditions during upgrades.
-- Ivanti Connect Secure remains a high-risk target; continue chaining analysis and compliance with CISA BOD 26-04.
-- New research indicates that frontier LLMs can maintain high accuracy with significantly reduced context windows, offering a path to lower inference costs.
+- CRITICAL RISK: GitLab CVE-2026-97229 exhibits a 65.22% EPSS exploit probability for unauthenticated RCE via regular expression evaluation in CI/CD pipelines.
+- NEW TODAY: Apple releases advisories for CVE-2024-27834, resolving pointer authentication bypass risks across iOS, iPadOS, macOS, and Safari.
+- NEW MODEL: Moonshot AI open-sources Kimi-K3.1-Pro, driving multimodal open-weight adoption alongside Mistral-Large-4-1T-A52B.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-04)](reports/2026/11/2026-11-04.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-05)](reports/2026/11/2026-11-05.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
