@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-06 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-07 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- GitLab CI/CD regular expression compiler vulnerability (CVE-2026-97229) exhibits an alarming 65.2% EPSS exploit probability, requiring immediate patching across self-hosted instances.
-- A newly surfaced privacy vulnerability in Claude Code automatically exposes developer email addresses to remote websites during web interactions (is_new_today).
-- Lightricks LTX-2.5 and Moonshot Kimi-K3.1-Pro highlight rapid community adoption of specialized open-weight multimodal models today (is_new_today).
+- SonicWall SonicOS SSLVPN faces a critical new authentication bypass (CVE-2026-19868) that can defeat SAML and MFA controls.
+- Ivanti Connect Secure appliances remain subject to active exploit chains involving predictable identifier creation and privilege escalation.
+- AI agent research shifts toward latent context compression ('Tools Need Not Speak in Text') to lower token cost and latency in tool orchestration.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-06)](reports/2026/11/2026-11-06.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-07)](reports/2026/11/2026-11-07.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---

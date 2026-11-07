@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-07",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.015,
+    "summary": "The global cybersecurity posture remains at a HIGH threat level day-over-day, anchored by newly surfaced authentication bypass vulnerabilities and ongoing multi-stage exploit chains target enterprise ...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 4,
+    "json_path": "data/2026/11/2026-11-07.json",
+    "md_path": "reports/2026/11/2026-11-07.md"
+  },
+  {
     "date": "2026-11-06",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
