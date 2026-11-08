@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-08",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.015,
+    "summary": "The global cyber threat climate remains HIGH day-over-day, anchored by systemic vulnerabilities in perimeter network appliances and core platform infrastructure. Security teams must prioritize immedia...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 3,
+    "news_count": 3,
+    "json_path": "data/2026/11/2026-11-08.json",
+    "md_path": "reports/2026/11/2026-11-08.md"
+  },
+  {
     "date": "2026-11-07",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
