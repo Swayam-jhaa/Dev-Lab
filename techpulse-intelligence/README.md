@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-08 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-09 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- CRITICAL SECURITY RISK: Over 1,100 public GitHub repositories exposed API secrets due to misconfigured AI coding agent permissions ("Don't Ask Again").
-- EDGE PERIMETER THREATS: Ivanti Connect Secure and SonicWall SSLVPN face high-priority authentication and privilege escalation flaw chains requiring adherence to CISA BOD 26-04 directives.
-- AI SECURITY GAP: New research exposes text-vector integrity vulnerabilities in offline RAG models, allowing unauthorized query steering despite cryptographic signatures.
+- NEW: Research into Authorization Drift in LLM Agents reveals non-adversarial boundary compliance failures during multi-step tool execution.
+- SonicWall SSLVPN (CVE-2026-19868) and Ivanti Connect Secure (CVE-2026-118527/111357) vulnerabilities require immediate mitigation under CISA BOD 26-04 guidance.
+- WordPress Core TOCTOU vulnerability (CVE-2026-119977) threatens staged package upgrades with unauthenticated RCE.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-08)](reports/2026/11/2026-11-08.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-09)](reports/2026/11/2026-11-09.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---

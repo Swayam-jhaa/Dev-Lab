@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-09",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.015,
+    "summary": "The global cybersecurity posture remains at a HIGH threat level today, holding steady day-over-day due to active enterprise exploitation vectors across perimeter access and core application layers. Vu...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 4,
+    "json_path": "data/2026/11/2026-11-09.json",
+    "md_path": "reports/2026/11/2026-11-09.md"
+  },
+  {
     "date": "2026-11-08",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
