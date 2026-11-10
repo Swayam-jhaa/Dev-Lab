@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-10",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.013,
+    "summary": "The global cyber threat environment remains HIGH today, driven by newly surfaced authentication bypasses in foundational infrastructure components. OpenSSH on Linux systems faces an unexpected return ...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 3,
+    "news_count": 3,
+    "json_path": "data/2026/11/2026-11-10.json",
+    "md_path": "reports/2026/11/2026-11-10.md"
+  },
+  {
     "date": "2026-11-09",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",

@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-09 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-10 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- NEW: Research into Authorization Drift in LLM Agents reveals non-adversarial boundary compliance failures during multi-step tool execution.
-- SonicWall SSLVPN (CVE-2026-19868) and Ivanti Connect Secure (CVE-2026-118527/111357) vulnerabilities require immediate mitigation under CISA BOD 26-04 guidance.
-- WordPress Core TOCTOU vulnerability (CVE-2026-119977) threatens staged package upgrades with unauthenticated RCE.
+- NEW TODAY: Critical authentication bypass vulnerability disclosed in OpenBSD OpenSSH for Linux (CVE-2026-123158) with an elevated 63.5% EPSS percentile rank.
+- NEW TODAY: GPUStack vulnerability (CVE-2026-102895) grants unauthenticated administrative control and RCE via YAML inference backends.
+- NEW TODAY: Anthropic announced Claude Fable 5.2 and Mythos 5.2, pushing commercial LLM frontier capabilities forward.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-09)](reports/2026/11/2026-11-09.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-10)](reports/2026/11/2026-11-10.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
