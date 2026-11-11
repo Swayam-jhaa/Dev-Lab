@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-11",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.016,
+    "summary": "The overall threat climate remains HIGH day-over-day, anchored by severe enterprise perimeter vulnerabilities in secure email gateways and VoIP infrastructure. Highlighting today's telemetry is an exp...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 3,
+    "news_count": 2,
+    "json_path": "data/2026/11/2026-11-11.json",
+    "md_path": "reports/2026/11/2026-11-11.md"
+  },
+  {
     "date": "2026-11-10",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
