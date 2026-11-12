@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-12",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.016,
+    "summary": "The global cyber threat climate remains ELEVATED to HIGH today, driven by multi-stage vulnerability chains in enterprise security gateways and telecommunications infrastructure. Particular focus is re...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 5,
+    "json_path": "data/2026/11/2026-11-12.json",
+    "md_path": "reports/2026/11/2026-11-12.md"
+  },
+  {
     "date": "2026-11-11",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
