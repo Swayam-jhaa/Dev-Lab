@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-11 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-12 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- CRITICAL CHAINING RISK: Barracuda ESG authentication bypass (CVE-2026-116606, 76th EPSS percentile) can be chained with command injection (CVE-2026-111560) for root access.
-- CISCO BROADWORKS EXPOSURE: Unauthenticated XXE (CVE-2026-20320) allows remote attackers to exfiltrate core configuration data.
-- AI AGENT RELIABILITY: New Evidence-Linked Memory research solves task degradation caused by misapplied or unverified agent memory trajectories.
+- Critical Barracuda ESG vulnerability chain (CVE-2026-116606 and CVE-2026-111560) allows unauthenticated remote root command execution.
+- AWS open-sources an official AWS emulator for offline localized cloud application development.
+- New AI serving framework 'Evolving Infra' optimizes KV cache and prefill-decode balancing for agentic workloads.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-11)](reports/2026/11/2026-11-11.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-12)](reports/2026/11/2026-11-12.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
