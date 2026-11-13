@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-12 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-13 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Critical Barracuda ESG vulnerability chain (CVE-2026-116606 and CVE-2026-111560) allows unauthenticated remote root command execution.
-- AWS open-sources an official AWS emulator for offline localized cloud application development.
-- New AI serving framework 'Evolving Infra' optimizes KV cache and prefill-decode balancing for agentic workloads.
+- Barracuda ESG critical exploit chain (CVE-2026-116606 and CVE-2026-111560) allows unauthenticated attackers to achieve root command injection.
+- NVIDIA CEO Jensen Huang resigns, marking a massive architectural and executive shift in the semiconductor industry.
+- Rust 1.100 official release hits the ecosystem, providing key compiler updates and stability improvements.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-12)](reports/2026/11/2026-11-12.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-13)](reports/2026/11/2026-11-13.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
