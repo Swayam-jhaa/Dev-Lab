@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-13 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-14 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Barracuda ESG critical exploit chain (CVE-2026-116606 and CVE-2026-111560) allows unauthenticated attackers to achieve root command injection.
-- NVIDIA CEO Jensen Huang resigns, marking a massive architectural and executive shift in the semiconductor industry.
-- Rust 1.100 official release hits the ecosystem, providing key compiler updates and stability improvements.
+- Check Point Gaia OS (CVE-2026-123039) and UnrealIRCd (CVE-2026-114713) emerge as high-priority disclosures requiring rapid local access and command injection mitigations.
+- Microsoft Outlook network spoofing vulnerability (CVE-2026-124194) maintains an elevated EPSS probability score of 1.62% (76th percentile).
+- Qwen3.8-27B multimodal model and LTX-2.5 video generator expand open-weights capabilities across vision and media generation tasks.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-13)](reports/2026/11/2026-11-13.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-14)](reports/2026/11/2026-11-14.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
