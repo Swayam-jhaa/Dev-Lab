@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-15",
+    "threat_level": "ELEVATED",
+    "yesterday_threat_level": "ELEVATED",
+    "top_epss": 0.0219,
+    "summary": "The global cybersecurity risk climate remains ELEVATED today, characterized by a persistent stream of high-severity vulnerabilities across perimeter devices, enterprise communications software, and cr...",
+    "cves_count": 5,
+    "ai_count": 6,
+    "tools_count": 5,
+    "news_count": 5,
+    "json_path": "data/2026/11/2026-11-15.json",
+    "md_path": "reports/2026/11/2026-11-15.md"
+  },
+  {
     "date": "2026-11-14",
     "threat_level": "ELEVATED",
     "yesterday_threat_level": "HIGH",

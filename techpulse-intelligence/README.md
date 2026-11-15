@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-14 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-15 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 6
 
 ### Highlights
-- Check Point Gaia OS (CVE-2026-123039) and UnrealIRCd (CVE-2026-114713) emerge as high-priority disclosures requiring rapid local access and command injection mitigations.
-- Microsoft Outlook network spoofing vulnerability (CVE-2026-124194) maintains an elevated EPSS probability score of 1.62% (76th percentile).
-- Qwen3.8-27B multimodal model and LTX-2.5 video generator expand open-weights capabilities across vision and media generation tasks.
+- Threat posture holds steady at ELEVATED with critical infrastructure advisories affecting Check Point, Cisco BroadWorks, and Microsoft Outlook.
+- NEW TODAY: Lovable low-code platform leak exposed over 200K private messages and identity documents, highlighting third-party web app storage risks.
+- NEW TODAY: Qwen released Qwen3.8-27B multimodal model, topping open-weights activity with over 6.5M downloads.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-14)](reports/2026/11/2026-11-14.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-15)](reports/2026/11/2026-11-15.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
