@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-15 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-16 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 6
+> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 5
 
 ### Highlights
-- Threat posture holds steady at ELEVATED with critical infrastructure advisories affecting Check Point, Cisco BroadWorks, and Microsoft Outlook.
-- NEW TODAY: Lovable low-code platform leak exposed over 200K private messages and identity documents, highlighting third-party web app storage risks.
-- NEW TODAY: Qwen released Qwen3.8-27B multimodal model, topping open-weights activity with over 6.5M downloads.
+- Qwen4-Max officially unveiled, pushing frontier LLM performance boundaries.
+- Universal XSS vulnerability discovered in uBlock Origin via website-driven element picker interactions.
+- MIRIX-2.0 multi-agent memory architecture achieves state-of-the-art 91.4% performance on LoCoMo benchmark.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-15)](reports/2026/11/2026-11-15.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-16)](reports/2026/11/2026-11-16.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---

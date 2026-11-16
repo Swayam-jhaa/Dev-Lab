@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-16",
+    "threat_level": "ELEVATED",
+    "yesterday_threat_level": "ELEVATED",
+    "top_epss": 0.0219,
+    "summary": "The global cybersecurity threat climate remains at ELEVATED today as critical infrastructure software and widely deployed client applications face notable vulnerabilities. Key enterprise security risk...",
+    "cves_count": 5,
+    "ai_count": 5,
+    "tools_count": 5,
+    "news_count": 5,
+    "json_path": "data/2026/11/2026-11-16.json",
+    "md_path": "reports/2026/11/2026-11-16.md"
+  },
+  {
     "date": "2026-11-15",
     "threat_level": "ELEVATED",
     "yesterday_threat_level": "ELEVATED",
