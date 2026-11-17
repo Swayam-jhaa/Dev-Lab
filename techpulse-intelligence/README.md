@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-16 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-17 ![Threat](https://img.shields.io/badge/THREAT-ELEVATED-yellow?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 5
+> **Threat Assessment**: ELEVATED | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Qwen4-Max officially unveiled, pushing frontier LLM performance boundaries.
-- Universal XSS vulnerability discovered in uBlock Origin via website-driven element picker interactions.
-- MIRIX-2.0 multi-agent memory architecture achieves state-of-the-art 91.4% performance on LoCoMo benchmark.
+- Third-party web supply chain breach reported at Optimizely, delivering malicious payloads via compromised web scripts on major platforms.
+- Check Point Gaia OS (CVE-2026-123039, EPSS 2.19%) and Microsoft Outlook (CVE-2026-124194) lead enterprise patch priorities under CISA BOD 26-04.
+- Newly released MiniMax-H3-Image and Lightricks LTX-2.5 advance open-weights image and video generation capabilities.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-16)](reports/2026/11/2026-11-16.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-17)](reports/2026/11/2026-11-17.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
