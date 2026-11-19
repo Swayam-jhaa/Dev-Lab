@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-19",
+    "threat_level": "CRITICAL",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.1702,
+    "summary": "The cybersecurity landscape has shifted to a CRITICAL threat level today, driven by a surge in high-impact, unauthenticated Remote Code Execution (RCE) vulnerabilities across critical infrastructure a...",
+    "cves_count": 5,
+    "ai_count": 3,
+    "tools_count": 2,
+    "news_count": 2,
+    "json_path": "data/2026/11/2026-11-19.json",
+    "md_path": "reports/2026/11/2026-11-19.md"
+  },
+  {
     "date": "2026-11-18",
     "threat_level": "HIGH",
     "yesterday_threat_level": "ELEVATED",
