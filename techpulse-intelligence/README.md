@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-19 ![Threat](https://img.shields.io/badge/THREAT-CRITICAL-crimson?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-20 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: CRITICAL | **Active CVEs**: 5 | **AI Breakthroughs**: 3
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Critical RCE vulnerabilities identified in LiteLLM and REDCap require immediate patching due to high exploitability and potential for unauthenticated access.
-- The release of Qwen3.8-27B and MiniMax-H3-Image marks a significant expansion in high-performance open-weights models, increasing the attack surface for AI-native applications.
-- New research into agentic checkpointing (StatePortal) and scene rigidity (StrideWorld) highlights the industry's focus on stabilizing interactive AI agents.
+- High Exploit Risk in AI Middleware: BerriAI LiteLLM (CVE-2026-40217) exhibits a 61.91% EPSS score, leaving unpatched AI gateway deployments vulnerable to remote bytecode execution.
+- OpenSSL Critical Vulnerability: Emerging reports highlight CVE-2026-121481 in OpenSSL (CVSS 9.8) involving a buffer overflow in EVP_EncodeBlock(), requiring rapid library audits across server fleets.
+- Incremental Systems Refactoring: 'rust-anything' has emerged as a top trending developer tool, facilitating safe, step-by-step Rust migrations verified against legacy behavior.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-19)](reports/2026/11/2026-11-19.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-20)](reports/2026/11/2026-11-20.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
