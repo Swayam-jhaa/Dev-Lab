@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-20 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-21 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- High Exploit Risk in AI Middleware: BerriAI LiteLLM (CVE-2026-40217) exhibits a 61.91% EPSS score, leaving unpatched AI gateway deployments vulnerable to remote bytecode execution.
-- OpenSSL Critical Vulnerability: Emerging reports highlight CVE-2026-121481 in OpenSSL (CVSS 9.8) involving a buffer overflow in EVP_EncodeBlock(), requiring rapid library audits across server fleets.
-- Incremental Systems Refactoring: 'rust-anything' has emerged as a top trending developer tool, facilitating safe, step-by-step Rust migrations verified against legacy behavior.
+- Broadcom VMware vCenter faces a newly surfaced authentication bypass vulnerability (CVE-2026-123890) allowing unauthenticated network access to VMware Directory Service.
+- Synology DiskStation Manager (CVE-2024-10441) leads threat telemetry in exploit probability with an EPSS score of 0.02415 (84.5th percentile).
+- Thinking Machines released Inkling-2-Mini, a trending open-weight image-text multimodal model capturing rapid community adoption.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-20)](reports/2026/11/2026-11-20.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-21)](reports/2026/11/2026-11-21.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
