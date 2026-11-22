@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-22",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0546,
+    "summary": "The global cyber threat climate remains steady at HIGH day-over-day, driven by high-severity infrastructure vulnerabilities across enterprise virtualization, collaboration platforms, and content manag...",
+    "cves_count": 5,
+    "ai_count": 4,
+    "tools_count": 4,
+    "news_count": 3,
+    "json_path": "data/2026/11/2026-11-22.json",
+    "md_path": "reports/2026/11/2026-11-22.md"
+  },
+  {
     "date": "2026-11-21",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",

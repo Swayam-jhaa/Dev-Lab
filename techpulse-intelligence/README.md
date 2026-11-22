@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-21 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-22 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Broadcom VMware vCenter faces a newly surfaced authentication bypass vulnerability (CVE-2026-123890) allowing unauthenticated network access to VMware Directory Service.
-- Synology DiskStation Manager (CVE-2024-10441) leads threat telemetry in exploit probability with an EPSS score of 0.02415 (84.5th percentile).
-- Thinking Machines released Inkling-2-Mini, a trending open-weight image-text multimodal model capturing rapid community adoption.
+- Critical enterprise vulnerabilities in Apache Roller (CVE-2026-129448) and VMware vCenter (CVE-2026-123890) show elevated EPSS percentile scores above 87%, requiring urgent patching.
+- Unsloth released GGUF quants for Inkling-2-Mini, surpassing 800k downloads in a single day for edge multimodal AI.
+- Formal methods achieved a historic benchmark with the community-driven Lean verification of the Riemann Hypothesis.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-21)](reports/2026/11/2026-11-21.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-22)](reports/2026/11/2026-11-22.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
