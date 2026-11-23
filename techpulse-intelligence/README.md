@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-22 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-23 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
 
 ### Highlights
-- Critical enterprise vulnerabilities in Apache Roller (CVE-2026-129448) and VMware vCenter (CVE-2026-123890) show elevated EPSS percentile scores above 87%, requiring urgent patching.
-- Unsloth released GGUF quants for Inkling-2-Mini, surpassing 800k downloads in a single day for edge multimodal AI.
-- Formal methods achieved a historic benchmark with the community-driven Lean verification of the Riemann Hypothesis.
+- Enterprise infrastructure faces elevated risk from high-percentile vulnerabilities in Apache Roller (CVE-2026-129448, EPSS 92.9%) and VMware vCenter (CVE-2026-123890).
+- NEW TODAY: thinkingmachines/Inkling-2-Mini surfaces as a highly upvoted open-weights vision-language model optimized for efficient local execution.
+- NEW TODAY: Rust tool EL4CTEO/fast-anything gains traction by allowing developer agents to selectively profile and rewrite slow Python/Node code paths.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-22)](reports/2026/11/2026-11-22.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-23)](reports/2026/11/2026-11-23.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
