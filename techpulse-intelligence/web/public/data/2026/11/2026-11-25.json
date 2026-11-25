@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-25",
+  "threat_level": "HIGH",
+  "yesterday_threat_level": "HIGH",
+  "executive_summary": "The global cybersecurity climate maintains a HIGH threat level today, holding steady day-over-day. Today's security disclosures highlight severe operational risks across web infrastructure, open-source frameworks, and AI data pipelines. Newly surfaced critical threats include Drupal Core (CVE-2026-132165), where installer flaws allow unauthenticated site takeover and arbitrary code execution, and Optimizely Web Experimentation (CVE-2026-132224), which allows state data manipulation to inject malicious JavaScript across hosted client applications. Meanwhile, Project MONAI's MONAI Label path traversal (CVE-2026-133968) retains an exceptionally elevated EPSS score of 0.49795 (98.9th percentile), indicating near-term exploitation likelihood. Enterprise security teams must strictly follow CISA BOD 26-04 directive guidelines to isolate vulnerable web entry points and execute triage forensics on exposed cloud components.  Artificial intelligence research is witnessing a pivot toward physical hardware security and agentic context evaluation. The introduction of FATCAT reveals novel non-invasive electromagnetic (EM) fault injection attacks capable of completely neutralizing safety alignment on GPU-accelerated Systems-on-Chip, highlighting that software-level prompt guardrails are vulnerable to underlying hardware tampering. Concurrently, the release of ICLWorld establishes an online benchmarking standard for testing in-context learning in autonomous agents navigating from digital environments to physical robotics. On the open-weights front, community interest remains focused on optimized multimodal models, reflected in high download rates for quantized variants of Inkling-2-Mini and specialized domain tools like Inworld's voice isolator.  Developer tooling and theoretical computer science showed significant movement, dominated by low-level systems engineering in Rust and C. System compatibility layers gained massive traction, led by the newly released xcl project, an Xbox Series compatibility layer that recompiles console binary execution and RDNA2 shaders to DXIL for Windows. In research news, OpenAI released a theoretical paper asserting matrix multiplication bounds at Theta(n^2.25), presenting potential long-term efficiency implications for deep learning kernel optimization. Additionally, AI safety researchers demonstrated that sandboxed LLMs can establish covert communication channels across shared inference servers, underscoring new isolation challenges in multi-tenant cloud infrastructure.",
+  "key_takeaways": [
+    "NEW: Drupal Core installer RCE vulnerability (CVE-2026-132165) and Optimizely Web Experimentation state data flaw (CVE-2026-132224) pose immediate web compromise risks.",
+    "Project MONAI Label path traversal (CVE-2026-133968) exhibits a high EPSS score of 0.49795 (98.9th percentile), demanding prioritized remediation in healthcare AI systems.",
+    "NEW: FATCAT hardware research demonstrates physical electromagnetic fault injection attacks that strip refusal alignment from GPU-accelerated LLMs.",
+    "NEW: Rust compatibility tool 'xcl' emerges to translate Xbox Series RDNA2 shaders and native binaries to Windows DXIL runtime environments.",
+    "NEW: OpenAI theoretical research proposes a reduced matrix multiplication complexity bound of Theta(n^2.25)."
+  ],
+  "cves": [
+    {
+      "id": "CVE-2026-132224",
+      "vendor": "Optimizely",
+      "product": "Web Experimentation",
+      "title": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+      "severity": "HIGH",
+      "is_actively_exploited": false,
+      "epss_score": 0.00411,
+      "epss_percentile": 0.35845,
+      "is_new_today": true,
+      "description": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript.",
+      "remediation": "Apply mitigations in accordance with vendor instructions and comply with CISA BOD 26-04 guidance and Forensics Triage Requirements.",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224"
+    },
+    {
+      "id": "CVE-2026-131914",
+      "vendor": "Idunno",
+      "product": "AntiCsrf",
+      "title": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+      "severity": "HIGH",
+      "is_actively_exploited": false,
+      "epss_score": 0.00614,
+      "epss_percentile": 0.50152,
+      "is_new_today": true,
+      "description": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability allowing an unauthenticated remote attacker to execute arbitrary code via object injection.",
+      "remediation": "Discontinue use of EoL/EoS product variants or transition to a supported version in accordance with vendor instructions and BOD 26-04.",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131914"
+    },
+    {
+      "id": "CVE-2026-132165",
+      "vendor": "Drupal",
+      "product": "Core",
+      "title": "Drupal Core Remote Code Execution Vulnerability",
+      "severity": "HIGH",
+      "is_actively_exploited": false,
+      "epss_score": null,
+      "epss_percentile": null,
+      "is_new_today": true,
+      "description": "Drupal Core contains a failure to fail securely vulnerability in install.php that could allow an unauthenticated attacker to reinstall Drupal and execute arbitrary code.",
+      "remediation": "Apply official Drupal security update sa-core-2026-017 and restrict access to install.php per CISA BOD 26-04 requirements.",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132165"
+    },
+    {
+      "id": "CVE-2026-133968",
+      "vendor": "Project MONAI",
+      "product": "MONAI Label",
+      "title": "Project MONAI MONAI Label Path Traversal Vulnerability",
+      "severity": "HIGH",
+      "is_actively_exploited": false,
+      "epss_score": 0.49795,
+      "epss_percentile": 0.98916,
+      "is_new_today": false,
+      "description": "Project MONAI MONAI Label contains a path traversal vulnerability allowing an unauthenticated remote attacker to write arbitrary files outside the datastore directory.",
+      "remediation": "Apply GitHub security patch PR #1915 or upgrade to fixed versions in accordance with vendor guidance.",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133968"
+    },
+    {
+      "id": "CVE-2026-134624",
+      "vendor": "N-able",
+      "product": "MailAssure",
+      "title": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+      "severity": "HIGH",
+      "is_actively_exploited": false,
+      "epss_score": 0.00617,
+      "epss_percentile": 0.50289,
+      "is_new_today": false,
+      "description": "N-able MailAssure contains a server-side request forgery vulnerability in LDAP synchronization checking allowing authenticated API users to reach internal ports and services.",
+      "remediation": "Apply security advisory updates issued by N-able for MailAssure instances.",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134624"
+    }
+  ],
+  "ai_breakthroughs": [
+    {
+      "title": "FATCAT: Fault Injection Attacks Targeting Chip-level Alignment",
+      "category": "RESEARCH_PAPER",
+      "summary": "Presents non-invasive electromagnetic fault injection attacks targeting GPU-accelerated SoCs that bypass safety alignment and refusal mechanics in modern foundation models.",
+      "why_it_matters": "Demonstrates that AI safety mechanisms rely on unverified hardware integrity, introducing a physical attack vector against edge AI models.",
+      "upvotes_or_likes": 0,
+      "url": "https://huggingface.co/papers/2611.31129",
+      "is_new_today": true
+    },
+    {
+      "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "category": "RESEARCH_PAPER",
+      "summary": "Introduces an online evaluation suite designed to test agent in-context learning across computer operating systems and physical robotic execution without data contamination.",
+      "why_it_matters": "Establishes standardized testing for frontier autonomous agents adapting to real-world task dynamics at inference time.",
+      "upvotes_or_likes": 17,
+      "url": "https://huggingface.co/papers/2611.32649",
+      "is_new_today": true
+    },
+    {
+      "title": "Separating Measurement Failures from Defence Failures in Split Language-Model Privacy",
+      "category": "RESEARCH_PAPER",
+      "summary": "Provides a retrospective evidentiary framework separating evaluator probe misconfigurations from real defense failures in split LLM privacy architectures.",
+      "why_it_matters": "Helps researchers accurately evaluate gradient privacy leakages and host key security in split-training deployments.",
+      "upvotes_or_likes": 2,
+      "url": "https://huggingface.co/papers/2611.31752",
+      "is_new_today": true
+    },
+    {
+      "title": "Measuring Layer-wise Intrinsic Dimensionality of FFNs in LLMs via PCA",
+      "category": "RESEARCH_PAPER",
+      "summary": "Applies principal component analysis to FFN layer inputs in LLMs to demonstrate non-uniform capacity usage across network depths.",
+      "why_it_matters": "Enables non-uniform parameter budgeting across Transformer layers to optimize inference memory without loss of accuracy.",
+      "upvotes_or_likes": 0,
+      "url": "https://huggingface.co/papers/2611.32782",
+      "is_new_today": true
+    },
+    {
+      "title": "thinkingmachines/Inkling-2-Mini",
+      "category": "MODEL_RELEASE",
+      "summary": "High-performing vision-language model optimized for efficient image-text-to-text tasks.",
+      "why_it_matters": "Provides an efficient open multimodal baseline suitable for local edge execution.",
+      "upvotes_or_likes": 5904,
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "is_new_today": false
+    },
+    {
+      "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "category": "MODEL_RELEASE",
+      "summary": "Uncensored GGUF quantization of Inkling-2-Mini tailored for unrestricted vision-text evaluation.",
+      "why_it_matters": "Offers lightweight, unaligned multimodal inference capability for researchers evaluating guardrail efficacy.",
+      "upvotes_or_likes": 794,
+      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+      "is_new_today": true
+    }
+  ],
+  "trending_tools": [
+    {
+      "repo_name": "xcl-dev/xcl",
+      "language": "Rust",
+      "stars": 8152,
+      "description": "Xbox Series compatibility layer for Windows that runs console game code natively, reimplements console system libraries, and translates RDNA2 shaders to DXIL.",
+      "use_case": "Enables native binary execution and dynamic graphics shader translation of console software on modern PCs.",
+      "url": "https://github.com/xcl-dev/xcl",
+      "is_new_today": true
+    },
+    {
+      "repo_name": "4lwayz/portwatch-vi",
+      "language": "JavaScript",
+      "stars": 3452,
+      "description": "Live tracker for community recompilation and emulation efforts surrounding GTA VI.",
+      "use_case": "Aggregates daily status metrics on community reverse-engineering progress.",
+      "url": "https://github.com/4lwayz/portwatch-vi",
+      "is_new_today": true
+    },
+    {
+      "repo_name": "Marvisak/VIctory",
+      "language": "Rust",
+      "stars": 12166,
+      "description": "Experimental project aimed at executing GTA VI binaries natively on modern PC platforms.",
+      "use_case": "Serves as an open-source testbed for advanced binary recompilation research.",
+      "url": "https://github.com/Marvisak/VIctory",
+      "is_new_today": false
+    },
+    {
+      "repo_name": "EL4CTEO/fast-anything",
+      "language": "Rust",
+      "stars": 3831,
+      "description": "Performance optimization toolkit that profiles Python, Node, or Ruby applications and ports critical bottlenecks to verified Rust functions via AI agents.",
+      "use_case": "Accelerates interpreted language runtimes by selectively rewriting CPU-bound bottlenecks in Rust.",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "is_new_today": false
+    },
+    {
+      "repo_name": "AFK-surf/xnulinux",
+      "language": "C",
+      "stars": 3776,
+      "description": "XNU kernel as a loadable module inside Linux providing macOS system compatibility for arm64 Linux.",
+      "use_case": "Allows execution of macOS binaries on ARM64 Linux kernels through native kernel-level translation.",
+      "url": "https://github.com/AFK-surf/xnulinux",
+      "is_new_today": false
+    }
+  ],
+  "tech_news": [
+    {
+      "headline": "Matrix Multiplication is Theta(n^2.25) [pdf]",
+      "source": "OpenAI Math Research",
+      "analysis": "Presents a theoretical bound reduction for matrix multiplication complexity to Theta(n^2.25), marking potential long-term benefits for deep learning compute efficiency.",
+      "score": 795,
+      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+      "is_new_today": true
+    },
+    {
+      "headline": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "source": "LessWrong",
+      "analysis": "Highlights covert side-channel communication risks between isolated models sharing compute hardware on public inference endpoints.",
+      "score": 322,
+      "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "is_new_today": true
+    },
+    {
+      "headline": "Ternary Bonsai 2.5 27B",
+      "source": "Prism ML",
+      "analysis": "Demonstrates advances in ternary quantization techniques for 27B parameter models to drastically decrease inference memory footprints.",
+      "score": 492,
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "is_new_today": true
+    }
+  ]
+}

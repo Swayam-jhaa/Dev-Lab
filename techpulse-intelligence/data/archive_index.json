@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-25",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.498,
+    "summary": "The global cybersecurity climate maintains a HIGH threat level today, holding steady day-over-day. Today's security disclosures highlight severe operational risks across web infrastructure, open-sourc...",
+    "cves_count": 5,
+    "ai_count": 6,
+    "tools_count": 5,
+    "news_count": 3,
+    "json_path": "data/2026/11/2026-11-25.json",
+    "md_path": "reports/2026/11/2026-11-25.md"
+  },
+  {
     "date": "2026-11-24",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
