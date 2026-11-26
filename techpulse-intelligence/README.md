@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-25 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-26 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 6
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
 
 ### Highlights
-- NEW: Drupal Core installer RCE vulnerability (CVE-2026-132165) and Optimizely Web Experimentation state data flaw (CVE-2026-132224) pose immediate web compromise risks.
-- Project MONAI Label path traversal (CVE-2026-133968) exhibits a high EPSS score of 0.49795 (98.9th percentile), demanding prioritized remediation in healthcare AI systems.
-- NEW: FATCAT hardware research demonstrates physical electromagnetic fault injection attacks that strip refusal alignment from GPU-accelerated LLMs.
+- Vates Xen Orchestra authentication bypass (CVE-2026-133469) allows unauthenticated full admin compromise via an empty JSON authentication token.
+- HPE/Juniper Session Smart Routers patched a critical root OS command injection vulnerability (CVE-2026-103406) triggered via Salt minion parameters.
+- 1Password published an official disclosure regarding a November 2026 security incident, triggering enterprise identity stack audits.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-25)](reports/2026/11/2026-11-25.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-26)](reports/2026/11/2026-11-26.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
