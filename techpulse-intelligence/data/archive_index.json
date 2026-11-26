@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-11-26",
+    "threat_level": "HIGH",
+    "yesterday_threat_level": "HIGH",
+    "top_epss": 0.0143,
+    "summary": "The global cyber threat climate remains at HIGH day-over-day, anchored by significant newly surfaced vulnerabilities across enterprise networking, virtualized infrastructure management, and industrial...",
+    "cves_count": 5,
+    "ai_count": 5,
+    "tools_count": 3,
+    "news_count": 3,
+    "json_path": "data/2026/11/2026-11-26.json",
+    "md_path": "reports/2026/11/2026-11-26.md"
+  },
+  {
     "date": "2026-11-25",
     "threat_level": "HIGH",
     "yesterday_threat_level": "HIGH",
