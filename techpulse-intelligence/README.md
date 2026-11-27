@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-26 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-27 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
-> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 5
+> **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Vates Xen Orchestra authentication bypass (CVE-2026-133469) allows unauthenticated full admin compromise via an empty JSON authentication token.
-- HPE/Juniper Session Smart Routers patched a critical root OS command injection vulnerability (CVE-2026-103406) triggered via Salt minion parameters.
-- 1Password published an official disclosure regarding a November 2026 security incident, triggering enterprise identity stack audits.
+- Critical Vates Xen Orchestra flaw (CVE-2026-133469) carries a high 31.77% EPSS probability score for unauthenticated administrative bypass via empty JSON tokens.
+- NEW: thinkingmachines/Inkling-2-Mini surfaces as a dominant open-weights multimodal vision-language model with broad adoption.
+- NEW: Research paper 'Revisiting LLMs as Context Engineers' introduces autonomous prompt optimization routines using offline empirical learning.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-26)](reports/2026/11/2026-11-26.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-27)](reports/2026/11/2026-11-27.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
