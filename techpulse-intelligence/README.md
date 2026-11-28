@@ -20,16 +20,16 @@ The intelligence is analyzed with **Google Gemini 2.5 Flash**, formatted into st
 ---
 
 <!-- LATEST_INTEL_START -->
-## 🚨 Latest Intelligence: 2026-11-27 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
+## 🚨 Latest Intelligence: 2026-11-28 ![Threat](https://img.shields.io/badge/THREAT-HIGH-orange?style=flat-square) [![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=flat-square&logo=rss)](data/rss.xml)
 
 > **Threat Assessment**: HIGH | **Active CVEs**: 5 | **AI Breakthroughs**: 4
 
 ### Highlights
-- Critical Vates Xen Orchestra flaw (CVE-2026-133469) carries a high 31.77% EPSS probability score for unauthenticated administrative bypass via empty JSON tokens.
-- NEW: thinkingmachines/Inkling-2-Mini surfaces as a dominant open-weights multimodal vision-language model with broad adoption.
-- NEW: Research paper 'Revisiting LLMs as Context Engineers' introduces autonomous prompt optimization routines using offline empirical learning.
+- NEW TODAY: OSGeo GeoServer vulnerabilities (CVE-2026-120705 and CVE-2026-129243) can be chained together by unauthenticated attackers to achieve full Remote Code Execution.
+- HIGH EXPLOIT PROBABILITY: Vates Xen Orchestra (CVE-2026-133469) carries a critical 0.31768 EPSS score (98.7th percentile), enabling admin bypass via empty JSON tokens.
+- AI SECURITY WARNING: New research shows AI coding agents frequently ignore markdown rule files, demonstrating that repository prompt rules cannot act as security controls.
 
-👉 **[Read Full Daily Intelligence Report (2026-11-27)](reports/2026/11/2026-11-27.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
+👉 **[Read Full Daily Intelligence Report (2026-11-28)](reports/2026/11/2026-11-28.md)** | 📡 **[Subscribe to RSS Feed](data/rss.xml)**
 <!-- LATEST_INTEL_END -->
 
 ---
